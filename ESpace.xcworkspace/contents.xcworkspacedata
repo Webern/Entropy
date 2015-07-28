@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "Documentation">
+      <FileRef
+         location = "group:Entropy/../README.md">
+      </FileRef>
+      <FileRef
+         location = "group:Entropy/../License.txt">
+      </FileRef>
+      <FileRef
+         location = "group:Todo.txt">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Entropy/Entropy.xcodeproj">
    </FileRef>
