@@ -1,0 +1,6 @@
+framework module MxmacOS {
+  umbrella header "MxmacOS.h"
+
+  export *
+  module * { export * }
+}
