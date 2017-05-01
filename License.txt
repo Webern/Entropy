@@ -1,9 +1,0 @@
-Copyright 2015 by Matthew James Briggs.
-All Rights Reserved.
-You may read the sourcecode.
-You may use the software.
-You may not alter the software.
-You may not create derivative works.
-You must acknowledge the author.
-
-I will change this to something permissive (like MIT) when the project is finished.

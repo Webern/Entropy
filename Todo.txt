@@ -1,3 +1,0 @@
-
-Create Rest Frequency System (stubbed but always returns false right now)
-Begin Composing Music
