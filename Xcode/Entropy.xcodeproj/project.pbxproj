@@ -39,6 +39,7 @@
 		29922EAA1EB6FC0800AD4CD3 /* MxmacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MxmacOS.framework; path = ../Frameworks/mx/bin/MxmacOS.framework; sourceTree = "<group>"; };
 		29954E3F1EB83F13001F003D /* libEazyXml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEazyXml.a; path = ../Frameworks/Ezx/build/Debug/libEazyXml.a; sourceTree = "<group>"; };
 		29954E501EB84977001F003D /* Throw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Throw.h; sourceTree = "<group>"; };
+		29954E511EB854B6001F003D /* RandomDigits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomDigits.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		29922E501EB6F14300AD4CD3 /* Entropy */ = {
 			isa = PBXGroup;
 			children = (
+				29954E511EB854B6001F003D /* RandomDigits.h */,
 				29954E501EB84977001F003D /* Throw.h */,
 				29922E611EB6F63B00AD4CD3 /* Config.cpp */,
 				29922E621EB6F63B00AD4CD3 /* Config.h */,
