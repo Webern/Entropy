@@ -12,6 +12,7 @@
 		29922EA81EB6F9CE00AD4CD3 /* MxmacOS in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		29922EA91EB6F9D200AD4CD3 /* MxmacOS in Frameworks */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		29922EAC1EB6FC8100AD4CD3 /* MxmacOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29922EAA1EB6FC0800AD4CD3 /* MxmacOS.framework */; };
+		29954E401EB83F13001F003D /* libEazyXml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29954E3F1EB83F13001F003D /* libEazyXml.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,8 @@
 		29922E621EB6F63B00AD4CD3 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		29922EA71EB6F9CB00AD4CD3 /* MxmacOS */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = MxmacOS; path = ../Frameworks/mx/bin/MxmacOS.framework/Versions/A/MxmacOS; sourceTree = "<group>"; };
 		29922EAA1EB6FC0800AD4CD3 /* MxmacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MxmacOS.framework; path = ../Frameworks/mx/bin/MxmacOS.framework; sourceTree = "<group>"; };
+		29954E3F1EB83F13001F003D /* libEazyXml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEazyXml.a; path = ../Frameworks/Ezx/build/Debug/libEazyXml.a; sourceTree = "<group>"; };
+		29954E501EB84977001F003D /* Throw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Throw.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29922EA91EB6F9D200AD4CD3 /* MxmacOS in Frameworks */,
+				29954E401EB83F13001F003D /* libEazyXml.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +74,7 @@
 		29922E501EB6F14300AD4CD3 /* Entropy */ = {
 			isa = PBXGroup;
 			children = (
+				29954E501EB84977001F003D /* Throw.h */,
 				29922E611EB6F63B00AD4CD3 /* Config.cpp */,
 				29922E621EB6F63B00AD4CD3 /* Config.h */,
 				29922E5E1EB6F3EE00AD4CD3 /* Entropy.h */,
@@ -82,6 +87,7 @@
 		29922E641EB6F8B800AD4CD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29954E3F1EB83F13001F003D /* libEazyXml.a */,
 				29922EA71EB6F9CB00AD4CD3 /* MxmacOS */,
 				29922EAA1EB6FC0800AD4CD3 /* MxmacOS.framework */,
 			);
@@ -212,14 +218,12 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../Sourcecode",
-					"$(PROJECT_DIR)/../Frameworks/mx/headers",
-				);
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Frameworks/ezx $(PROJECT_DIR)/../Frameworks/mx/headers $(PROJECT_DIR)/../Sourcecode";
 			};
 			name = Debug;
 		};
@@ -275,13 +279,11 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../Sourcecode",
-					"$(PROJECT_DIR)/../Frameworks/mx/headers",
-				);
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Frameworks/ezx $(PROJECT_DIR)/../Frameworks/mx/headers $(PROJECT_DIR)/../Sourcecode";
 			};
 			name = Release;
 		};
@@ -289,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = BEL6W3V5K4;
+				HEADER_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -297,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = BEL6W3V5K4;
+				HEADER_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
