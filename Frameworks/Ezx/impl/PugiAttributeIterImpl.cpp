@@ -94,7 +94,7 @@ namespace ezx
 
         if ( getIsEndIter() )
         {
-            EASYXML_THROW( "XAttributeIterator attempted to dereference and 'end' iterator" );
+            EASYXML_THROW( "XAttributeIterator attempted to dereference an 'end' iterator" );
         }
 
         myReturnableAttribute = PugiAttribute{ *myIter, myParentElement, myXDoc.lock() };
@@ -111,7 +111,7 @@ namespace ezx
 
         if ( getIsEndIter() )
         {
-            EASYXML_THROW( "XAttributeIterator attempted to dereference and 'end' iterator" );
+            EASYXML_THROW( "XAttributeIterator attempted to dereference an 'end' iterator" );
         }
 
         myReturnableAttribute = PugiAttribute{ *myIter, myParentElement, myXDoc.lock() };

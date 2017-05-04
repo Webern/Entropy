@@ -5,6 +5,7 @@
 #include "InstrumentInfo.h"
 
 #include <string>
+#include <vector>
 
 namespace ezx
 {
@@ -29,9 +30,12 @@ namespace entropy
         std::string myInputFilePath;
         std::string myOutputFilePath;
         std::string myWorkTitle;
-
+        std::vector<InstrumentInfo> myInstrumentPrototypes;
+        
     private:
         void parseInput();
         void parseMetadata( const ezx::XElement& inElement );
+        void parseInstrumentDictionary( const ezx::XElement& inElement );
+        void parseInstrumentDefinition( const ezx::XElement& inElement );
     };
 }

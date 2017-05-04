@@ -59,12 +59,19 @@ namespace entropy
         xdoc->loadFile( getInputFilePath() );
         const auto root = xdoc->getRoot();
         ENTROPY_ASSERT( root->getName() == "entropy-input" );
-        auto rootChild = root->begin();
-        const auto rootEnd = root->end();
-        ENTROPY_ASSERT( rootChild != rootEnd );
-        const auto rootChild1 = rootChild->getName();
-        ENTROPY_ASSERT( rootChild1 == "metadata" );
-        parseMetadata( *rootChild );
+        auto it = root->begin();
+        const auto e = root->end();
+
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "metadata" );
+        parseMetadata( *it );
+        ++it;
+
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "instrument-dictionary" );
+        parseInstrumentDictionary( *it );
+        ++it;
+
     }
 
 
@@ -75,5 +82,72 @@ namespace entropy
         ENTROPY_ASSERT( child1 == "work-title" );
         ENTROPY_ASSERT( child->getType() == ezx::XElementType::text );
         myWorkTitle = child->getValue();
+    }
+
+
+    void Config::parseInstrumentDictionary( const ezx::XElement& inElement )
+    {
+        myInstrumentPrototypes.clear();
+        ENTROPY_ASSERT( inElement.getName() == "instrument-dictionary" );
+        auto it = inElement.begin();
+        const auto e = inElement.end();
+
+        for ( ; it != e; ++it )
+        {
+            parseInstrumentDefinition( *it );
+        }
+    }
+
+
+    void Config::parseInstrumentDefinition( const ezx::XElement& inElement )
+    {
+        ENTROPY_ASSERT( inElement.getName() == "instrument-definition" );
+        InstrumentInfo instrument;
+        ENTROPY_ASSERT( inElement.attributesBegin() != inElement.attributesEnd() );
+        auto attr = inElement.attributesBegin();
+        ENTROPY_ASSERT( attr->getName() == "instrument-id" );
+        instrument.instrumentTypeID = stringInstrumentTypeID( attr->getValue() );
+        auto it = inElement.begin();
+        const auto e = inElement.end();
+
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "name" );
+        instrument.name = it->getValue();
+        ++it;
+
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "abbreviation" );
+        instrument.abbreviation = it->getValue();
+        ++it;
+
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "starting-clefs" );
+        for( auto c = it->begin(); c != it->end(); ++c )
+        {
+            ENTROPY_ASSERT( c->getName() == "clef" );
+            instrument.startingClefs.push_back( stringClefName( c->getValue() ) );
+        }
+        ++it;
+
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "allowable-clefs" );
+        for( auto c = it->begin(); c != it->end(); ++c )
+        {
+            ENTROPY_ASSERT( c->getName() == "clef" );
+            instrument.allowableClefs.push_back( stringClefName( c->getValue() ) );
+        }
+        ++it;
+
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "musicxml-sound" );
+        instrument.musicXmlSound = it->getValue();
+        ++it;
+
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "transposition" );
+        instrument.transposition = std::stoi(it->getValue());
+        ++it;
+
+        myInstrumentPrototypes.emplace_back( std::move( instrument ) );
     }
 }

@@ -3,7 +3,7 @@
 #pragma once
 
 #include "EazyXml/XAttribute.h"
-#include "EazyXml/XAttribute.h"
+#include "EazyXml/XAttributeIterator.h"
 #include "EazyXml/XDoc.h"
 #include "EazyXml/XDocSpec.h"
 #include "EazyXml/XElement.h"

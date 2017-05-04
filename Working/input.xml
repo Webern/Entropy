@@ -14,7 +14,7 @@
                 <clef>TREBLE</clef>
             </allowable-clefs>
             <musicxml-sound>strings.violin</musicxml-sound>
-            <transposition>none</transposition>
+            <transposition>0</transposition>
             <range-low>G3</range-low>
             <range-high>C7</range-high>
         </instrument-definition>
@@ -43,7 +43,7 @@
                 <clef>TENOR</clef>
                 <clef>TREBLE</clef>
             </allowable-clefs>
-            <musicxml-sound>strings.viola</musicxml-sound>
+            <musicxml-sound>strings.cello</musicxml-sound>
             <transposition>0</transposition>
             <range-low>C2</range-low>
             <range-high>G5</range-high>
@@ -59,7 +59,7 @@
                 <clef>TENOR</clef>
                 <clef>TREBLE</clef>
             </allowable-clefs>
-            <musicxml-sound>strings.viola</musicxml-sound>
+            <musicxml-sound>strings.contrabass</musicxml-sound>
             <transposition>-12</transposition>
             <range-low>E1</range-low>
             <range-high>G4</range-high>

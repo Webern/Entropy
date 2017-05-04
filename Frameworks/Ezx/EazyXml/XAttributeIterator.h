@@ -3,7 +3,7 @@
 #pragma once
 
 #include "EazyXml/XAttribute.h"
-#include "EazyXml/XAttributeIterImpl.h"
+#include "impl/XAttributeIterImpl.h"
 
 #include <iostream>
 #include <memory>
