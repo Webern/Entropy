@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include "InstrumentInfo.h"
+
 #include <string>
 
 namespace ezx
