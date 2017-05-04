@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="19.0">
+    <meta>
+        <filters directoryPatterns="" filePatterns="Entropy.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="Entropy.xpr">
+        <folder path="."/>
+        <file name="Entropy.xsd"/>
+        <file name="../input.xml"/>
+    </projectTree>
+</project>

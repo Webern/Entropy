@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29954E411EB83F58001F003D /* PugiAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29954E0D1EB83790001F003D /* PugiAttribute.cpp */; };
+		29954E421EB83F58001F003D /* PugiAttributeIterImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29954E0F1EB83790001F003D /* PugiAttributeIterImpl.cpp */; };
+		29954E431EB83F58001F003D /* PugiDoc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29954E111EB83790001F003D /* PugiDoc.cpp */; };
+		29954E441EB83F58001F003D /* PugiElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29954E131EB83790001F003D /* PugiElement.cpp */; };
+		29954E451EB83F58001F003D /* PugiElementIterImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29954E151EB83790001F003D /* PugiElementIterImpl.cpp */; };
+		29954E461EB83F58001F003D /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29954E281EB838BD001F003D /* pugixml.cpp */; };
+		29954E471EB83F58001F003D /* XAttributeIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29954E1B1EB83790001F003D /* XAttributeIterator.cpp */; };
+		29954E481EB83F58001F003D /* XElementIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29954E1C1EB83790001F003D /* XElementIterator.cpp */; };
+		29954E491EB83F58001F003D /* XFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29954E1D1EB83790001F003D /* XFactory.cpp */; };
+		29954E4D1EB84149001F003D /* XAttributeIterImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 29954E4B1EB84149001F003D /* XAttributeIterImpl.h */; };
+		29954E4E1EB84149001F003D /* XElementIterImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 29954E4C1EB84149001F003D /* XElementIterImpl.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29954E011EB83790001F003D /* XAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAttribute.h; sourceTree = "<group>"; };
+		29954E021EB83790001F003D /* XAttributeIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAttributeIterator.h; sourceTree = "<group>"; };
+		29954E041EB83790001F003D /* XDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDoc.h; sourceTree = "<group>"; };
+		29954E051EB83790001F003D /* XDocSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDocSpec.h; sourceTree = "<group>"; };
+		29954E061EB83790001F003D /* XElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XElement.h; sourceTree = "<group>"; };
+		29954E071EB83790001F003D /* XElementIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XElementIterator.h; sourceTree = "<group>"; };
+		29954E091EB83790001F003D /* XFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFactory.h; sourceTree = "<group>"; };
+		29954E0A1EB83790001F003D /* XForwardDeclare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XForwardDeclare.h; sourceTree = "<group>"; };
+		29954E0D1EB83790001F003D /* PugiAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PugiAttribute.cpp; sourceTree = "<group>"; };
+		29954E0E1EB83790001F003D /* PugiAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PugiAttribute.h; sourceTree = "<group>"; };
+		29954E0F1EB83790001F003D /* PugiAttributeIterImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PugiAttributeIterImpl.cpp; sourceTree = "<group>"; };
+		29954E101EB83790001F003D /* PugiAttributeIterImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PugiAttributeIterImpl.h; sourceTree = "<group>"; };
+		29954E111EB83790001F003D /* PugiDoc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PugiDoc.cpp; sourceTree = "<group>"; };
+		29954E121EB83790001F003D /* PugiDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PugiDoc.h; sourceTree = "<group>"; };
+		29954E131EB83790001F003D /* PugiElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PugiElement.cpp; sourceTree = "<group>"; };
+		29954E141EB83790001F003D /* PugiElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PugiElement.h; sourceTree = "<group>"; };
+		29954E151EB83790001F003D /* PugiElementIterImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PugiElementIterImpl.cpp; sourceTree = "<group>"; };
+		29954E161EB83790001F003D /* PugiElementIterImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PugiElementIterImpl.h; sourceTree = "<group>"; };
+		29954E1B1EB83790001F003D /* XAttributeIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XAttributeIterator.cpp; sourceTree = "<group>"; };
+		29954E1C1EB83790001F003D /* XElementIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XElementIterator.cpp; sourceTree = "<group>"; };
+		29954E1D1EB83790001F003D /* XFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XFactory.cpp; sourceTree = "<group>"; };
+		29954E271EB838BD001F003D /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugiconfig.hpp; sourceTree = "<group>"; };
+		29954E281EB838BD001F003D /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
+		29954E291EB838BD001F003D /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugixml.hpp; sourceTree = "<group>"; };
+		29954E2B1EB8395F001F003D /* Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parse.h; sourceTree = "<group>"; };
+		29954E2C1EB8395F001F003D /* Throw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Throw.h; sourceTree = "<group>"; };
+		29954E2D1EB839CE001F003D /* XThrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XThrow.h; sourceTree = "<group>"; };
+		29954E3B1EB83E6E001F003D /* libEazyXml.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEazyXml.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		29954E4A1EB84093001F003D /* EazyXml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EazyXml.h; sourceTree = "<group>"; };
+		29954E4B1EB84149001F003D /* XAttributeIterImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAttributeIterImpl.h; sourceTree = "<group>"; };
+		29954E4C1EB84149001F003D /* XElementIterImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XElementIterImpl.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29954E381EB83E6E001F003D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29954DED1EB836D9001F003D = {
+			isa = PBXGroup;
+			children = (
+				29954E0C1EB83790001F003D /* Private */,
+				29954E001EB83790001F003D /* Public */,
+				29954DF71EB836D9001F003D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29954DF71EB836D9001F003D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29954E3B1EB83E6E001F003D /* libEazyXml.a */,
+			);
+			name = Products;
+			path = ../../../../../../../../Desktop/crap/EX/EasyXml;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		29954E001EB83790001F003D /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				29954E4A1EB84093001F003D /* EazyXml.h */,
+				29954E011EB83790001F003D /* XAttribute.h */,
+				29954E021EB83790001F003D /* XAttributeIterator.h */,
+				29954E041EB83790001F003D /* XDoc.h */,
+				29954E051EB83790001F003D /* XDocSpec.h */,
+				29954E061EB83790001F003D /* XElement.h */,
+				29954E071EB83790001F003D /* XElementIterator.h */,
+				29954E091EB83790001F003D /* XFactory.h */,
+				29954E0A1EB83790001F003D /* XForwardDeclare.h */,
+			);
+			name = Public;
+			path = EazyXml;
+			sourceTree = SOURCE_ROOT;
+		};
+		29954E0C1EB83790001F003D /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				29954E2B1EB8395F001F003D /* Parse.h */,
+				29954E0D1EB83790001F003D /* PugiAttribute.cpp */,
+				29954E0E1EB83790001F003D /* PugiAttribute.h */,
+				29954E0F1EB83790001F003D /* PugiAttributeIterImpl.cpp */,
+				29954E101EB83790001F003D /* PugiAttributeIterImpl.h */,
+				29954E271EB838BD001F003D /* pugiconfig.hpp */,
+				29954E111EB83790001F003D /* PugiDoc.cpp */,
+				29954E121EB83790001F003D /* PugiDoc.h */,
+				29954E131EB83790001F003D /* PugiElement.cpp */,
+				29954E141EB83790001F003D /* PugiElement.h */,
+				29954E151EB83790001F003D /* PugiElementIterImpl.cpp */,
+				29954E161EB83790001F003D /* PugiElementIterImpl.h */,
+				29954E281EB838BD001F003D /* pugixml.cpp */,
+				29954E291EB838BD001F003D /* pugixml.hpp */,
+				29954E2C1EB8395F001F003D /* Throw.h */,
+				29954E1B1EB83790001F003D /* XAttributeIterator.cpp */,
+				29954E4B1EB84149001F003D /* XAttributeIterImpl.h */,
+				29954E1C1EB83790001F003D /* XElementIterator.cpp */,
+				29954E4C1EB84149001F003D /* XElementIterImpl.h */,
+				29954E1D1EB83790001F003D /* XFactory.cpp */,
+				29954E2D1EB839CE001F003D /* XThrow.h */,
+			);
+			name = Private;
+			path = impl;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29954E391EB83E6E001F003D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29954E4E1EB84149001F003D /* XElementIterImpl.h in Headers */,
+				29954E4D1EB84149001F003D /* XAttributeIterImpl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		29954E3A1EB83E6E001F003D /* EazyXml */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29954E3C1EB83E6E001F003D /* Build configuration list for PBXNativeTarget "EazyXml" */;
+			buildPhases = (
+				29954E371EB83E6E001F003D /* Sources */,
+				29954E381EB83E6E001F003D /* Frameworks */,
+				29954E391EB83E6E001F003D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EazyXml;
+			productName = EazyXml;
+			productReference = 29954E3B1EB83E6E001F003D /* libEazyXml.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29954DEE1EB836D9001F003D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Matthew James Briggs";
+				TargetAttributes = {
+					29954E3A1EB83E6E001F003D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BEL6W3V5K4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 29954DF11EB836D9001F003D /* Build configuration list for PBXProject "EazyXml" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29954DED1EB836D9001F003D;
+			productRefGroup = 29954DF71EB836D9001F003D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29954E3A1EB83E6E001F003D /* EazyXml */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29954E371EB83E6E001F003D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29954E411EB83F58001F003D /* PugiAttribute.cpp in Sources */,
+				29954E421EB83F58001F003D /* PugiAttributeIterImpl.cpp in Sources */,
+				29954E431EB83F58001F003D /* PugiDoc.cpp in Sources */,
+				29954E441EB83F58001F003D /* PugiElement.cpp in Sources */,
+				29954E451EB83F58001F003D /* PugiElementIterImpl.cpp in Sources */,
+				29954E461EB83F58001F003D /* pugixml.cpp in Sources */,
+				29954E471EB83F58001F003D /* XAttributeIterator.cpp in Sources */,
+				29954E481EB83F58001F003D /* XElementIterator.cpp in Sources */,
+				29954E491EB83F58001F003D /* XFactory.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		29954DFB1EB836D9001F003D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = $PROJECT_DIR;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		29954DFC1EB836D9001F003D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = $PROJECT_DIR;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		29954E3D1EB83E6E001F003D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = BEL6W3V5K4;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		29954E3E1EB83E6E001F003D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = BEL6W3V5K4;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29954DF11EB836D9001F003D /* Build configuration list for PBXProject "EazyXml" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29954DFB1EB836D9001F003D /* Debug */,
+				29954DFC1EB836D9001F003D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29954E3C1EB83E6E001F003D /* Build configuration list for PBXNativeTarget "EazyXml" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29954E3D1EB83E6E001F003D /* Debug */,
+				29954E3E1EB83E6E001F003D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29954DEE1EB836D9001F003D /* Project object */;
+}

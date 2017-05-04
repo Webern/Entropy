@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Entropy.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:../Frameworks/Ezx"
+      name = "Ezx">
+      <FileRef
+         location = "group:EazyXml.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:../Working"
+      name = "Working">
+      <FileRef
+         location = "group:output.xml">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/mjb/Entropy/Working/input.xml">
+      </FileRef>
+   </Group>
+</Workspace>
