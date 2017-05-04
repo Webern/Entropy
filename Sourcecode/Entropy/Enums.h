@@ -4,6 +4,8 @@
 
 #include <string>
 
+#include "EnumMacros.h"
+
 namespace entropy
 {
     enum class ClefName
@@ -14,15 +16,18 @@ namespace entropy
         BASS
     };
 
-    inline std::string clefName( ClefName inValue )
-    {
-        switch ( inValue )
-        {
-            case ClefName::TREBLE: return "TREBLE";
-            case ClefName::ALTO: return "ALTO";
-            case ClefName::TENOR: return "TENOR";
-            case ClefName::BASS: return "BASS";
-            default: return "ERROR";
-        }
-    }
+    ENUM_TOSTR_BEGIN( ClefName )
+    ENUM_TOSTR_VALUE( ClefName, TREBLE )
+    ENUM_TOSTR_VALUE( ClefName, ALTO )
+    ENUM_TOSTR_VALUE( ClefName, TENOR )
+    ENUM_TOSTR_VALUE( ClefName, BASS )
+    ENUM_TOSTR_END
+
+    ENUM_PARSE_BEGIN( ClefName )
+    ENUM_PARSE_VALUE( ClefName, TREBLE )
+    ENUM_PARSE_VALUE( ClefName, ALTO )
+    ENUM_PARSE_VALUE( ClefName, TENOR )
+    ENUM_PARSE_VALUE( ClefName, BASS )
+    ENUM_PARSE_END
+
 }

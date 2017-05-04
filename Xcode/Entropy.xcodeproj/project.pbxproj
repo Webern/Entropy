@@ -34,6 +34,7 @@
 		29685B051EBADBD000450727 /* InstrumentInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InstrumentInfo.cpp; sourceTree = "<group>"; };
 		29685B061EBADBD000450727 /* InstrumentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentInfo.h; sourceTree = "<group>"; };
 		29685B081EBAE26700450727 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		29685B091EBAE7B000450727 /* EnumMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumMacros.h; sourceTree = "<group>"; };
 		29922E4E1EB6F14300AD4CD3 /* Entropy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Entropy; sourceTree = BUILT_PRODUCTS_DIR; };
 		29922E5E1EB6F3EE00AD4CD3 /* Entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entropy.h; sourceTree = "<group>"; };
 		29922E5F1EB6F3EE00AD4CD3 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 				29922E611EB6F63B00AD4CD3 /* Config.cpp */,
 				29922E621EB6F63B00AD4CD3 /* Config.h */,
 				29922E5E1EB6F3EE00AD4CD3 /* Entropy.h */,
+				29685B091EBAE7B000450727 /* EnumMacros.h */,
 				29685B081EBAE26700450727 /* Enums.h */,
 				29685B051EBADBD000450727 /* InstrumentInfo.cpp */,
 				29685B061EBADBD000450727 /* InstrumentInfo.h */,
