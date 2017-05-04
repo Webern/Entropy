@@ -5,12 +5,7 @@
 #include "mx/api/DocumentManager.h"
 #include "Entropy/RandomDigits.h"
 
-#include <iostream>
-#include <fstream>
 
-#include <stdio.h>      /* printf, scanf, puts, NULL */
-#include <stdlib.h>     /* srand, rand */
-#include <time.h>
 
 int main( int argc, const char* argv[] )
 {

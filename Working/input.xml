@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
-<score-partwise>
-  <work>
-    <work-title>Hello
-</work-title>
-  </work>
-  <part-list>
-    <score-part id="ID">
-      <part-name />
-    </score-part>
-  </part-list>
-  <part id="ID">
-    <measure number="" />
-  </part>
-</score-partwise>
+<entropy-input>
+    <metadata>
+        <work-title>Bones the Cat</work-title>
+    </metadata>
+    <instrument-groups>
+        <instrument-group>
+            <group-name>String Quartet</group-name>
+            <group-type>Bracket</group-type>
+            <instrument>
+                <name>Violin 1</name>
+                <abbreviation>Vln. 1</abbreviation>
+                <musicxml-sound>strings.violin</musicxml-sound>
+                <clef>treble</clef>
+            </instrument>
+            <instrument>
+                <name>Violin 2</name>
+                <abbreviation>Vln. 2</abbreviation>
+                <musicxml-sound>strings.violin</musicxml-sound>
+                <clef>treble</clef>
+            </instrument>
+            <instrument>
+                <name>Viola</name>
+                <abbreviation>Vla.</abbreviation>
+                <musicxml-sound>strings.viola</musicxml-sound>
+                <clef>viola</clef>
+            </instrument>
+            <instrument>
+                <name>Cello</name>
+                <abbreviation>Vlc.</abbreviation>
+                <musicxml-sound>strings.cello</musicxml-sound>
+                <clef>bass</clef>
+            </instrument>
+        </instrument-group>
+    </instrument-groups>
+</entropy-input>
