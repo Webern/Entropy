@@ -53,6 +53,122 @@ namespace entropy
     ENUM_PARSE_VALUE( InstrumentTypeID, DOUBLE_BASS )
     ENUM_PARSE_END;
 
+    enum class Step
+    {
+        C,
+        D,
+        E,
+        F,
+        G,
+        A,
+        B,
+        ERROR,
+    };
+
+    ENUM_TOSTR_BEGIN( Step )
+    ENUM_TOSTR_VALUE( Step, C )
+    ENUM_TOSTR_VALUE( Step, D )
+    ENUM_TOSTR_VALUE( Step, E )
+    ENUM_TOSTR_VALUE( Step, F )
+    ENUM_TOSTR_VALUE( Step, G )
+    ENUM_TOSTR_VALUE( Step, A )
+    ENUM_TOSTR_VALUE( Step, B )
+    ENUM_TOSTR_END;
+
+    ENUM_PARSE_BEGIN( Step )
+    ENUM_PARSE_VALUE( Step, A )
+    ENUM_PARSE_VALUE( Step, B )
+    ENUM_PARSE_VALUE( Step, C )
+    ENUM_PARSE_VALUE( Step, D )
+    ENUM_PARSE_VALUE( Step, E )
+    ENUM_PARSE_VALUE( Step, F )
+    ENUM_PARSE_VALUE( Step, G )
+    ENUM_PARSE_VALUE( Step, A )
+    ENUM_PARSE_VALUE( Step, B )
+    ENUM_PARSE_END;
+
+    inline int intStep( Step inValue )
+    {
+        switch ( inValue )
+        {
+            case Step::C: return 0;
+            case Step::D: return 2;
+            case Step::E: return 4;
+            case Step::F: return 5;
+            case Step::G: return 7;
+            case Step::A: return 9;
+            case Step::B: return 11;
+            default: return 0;
+        }
+    }
+
+    inline Step intStep( int inValue )
+    {
+        switch ( inValue )
+        {
+            case 0: return Step::C;
+            case 2: return Step::D;
+            case 4: return Step::E;
+            case 5: return Step::F;
+            case 7: return Step::G;
+            case 9: return Step::A;
+            case 11: return Step::B;
+            default: return Step::ERROR;
+        }
+    }
+
+    enum class Alter
+    {
+        NATURAL,
+        SHARP,
+        FLAT,
+        DOUBLE_SHARP,
+        DOUBLE_FLAT,
+        ERROR,
+    };
+
+    ENUM_TOSTR_BEGIN( Alter )
+    ENUM_TOSTR_VALUE( Alter, NATURAL )
+    ENUM_TOSTR_VALUE( Alter, SHARP )
+    ENUM_TOSTR_VALUE( Alter, FLAT )
+    ENUM_TOSTR_VALUE( Alter, DOUBLE_SHARP )
+    ENUM_TOSTR_VALUE( Alter, DOUBLE_FLAT )
+    ENUM_TOSTR_END;
+
+    ENUM_PARSE_BEGIN( Alter )
+    ENUM_PARSE_VALUE( Alter, NATURAL )
+    ENUM_PARSE_VALUE( Alter, SHARP )
+    ENUM_PARSE_VALUE( Alter, FLAT )
+    ENUM_PARSE_VALUE( Alter, DOUBLE_SHARP )
+    ENUM_PARSE_VALUE( Alter, DOUBLE_FLAT )
+    ENUM_PARSE_END;
+
+    inline int intAlter( Alter inValue )
+    {
+        switch ( inValue )
+        {
+            case Alter::NATURAL: return 0;
+            case Alter::SHARP: return 1;
+            case Alter::FLAT: return -1;
+            case Alter::DOUBLE_SHARP: return 2;
+            case Alter::DOUBLE_FLAT: return -2;
+            default: return 0;
+        }
+    }
+
+    inline Alter intAlter( int inValue )
+    {
+        switch ( inValue )
+        {
+            case 0: return Alter::NATURAL;
+            case 1: return Alter::SHARP;
+            case -1: return Alter::FLAT;
+            case 2: return Alter::DOUBLE_SHARP;
+            case -2: return Alter::DOUBLE_FLAT;
+            default: return Alter::ERROR;
+        }
+    }
+
     enum class Spelling
     {
         Cn,    ///< C-natural
@@ -244,6 +360,94 @@ namespace entropy
 
             return defaultSpellingMap;
         }
+
+        static const std::map<const Spelling, const Step>& getStepMap()
+        {
+            static std::map<const Spelling, const Step> pitchStepMap =
+            {
+                { Spelling::Cn, Step::C },
+                { Spelling::Dn, Step::D },
+                { Spelling::En, Step::E },
+                { Spelling::Fn, Step::F },
+                { Spelling::Gn, Step::G },
+                { Spelling::An, Step::A },
+                { Spelling::Bn, Step::B },
+                { Spelling::Cs, Step::C },
+                { Spelling::Ds, Step::D },
+                { Spelling::Es, Step::E },
+                { Spelling::Fs, Step::F },
+                { Spelling::Gs, Step::G },
+                { Spelling::As, Step::A },
+                { Spelling::Bs, Step::B },
+                { Spelling::Cb, Step::C },
+                { Spelling::Db, Step::D },
+                { Spelling::Eb, Step::E },
+                { Spelling::Fb, Step::F },
+                { Spelling::Gb, Step::G },
+                { Spelling::Ab, Step::A },
+                { Spelling::Bb, Step::B },
+                { Spelling::Cx, Step::C },
+                { Spelling::Dx, Step::D },
+                { Spelling::Ex, Step::E },
+                { Spelling::Fx, Step::F },
+                { Spelling::Gx, Step::G },
+                { Spelling::Ax, Step::A },
+                { Spelling::Bx, Step::B },
+                { Spelling::Cd, Step::C },
+                { Spelling::Dd, Step::D },
+                { Spelling::Ed, Step::E },
+                { Spelling::Fd, Step::F },
+                { Spelling::Gd, Step::G },
+                { Spelling::Ad, Step::A },
+                { Spelling::Bd, Step::B },
+            };
+
+            return pitchStepMap;
+        }
+
+        static const std::map<const Spelling, const Alter>& getAlterMap()
+        {
+            static std::map<const Spelling, const Alter> pitchAlterMap =
+            {
+                { Spelling::Cn, Alter::NATURAL },
+                { Spelling::Dn, Alter::NATURAL },
+                { Spelling::En, Alter::NATURAL },
+                { Spelling::Fn, Alter::NATURAL },
+                { Spelling::Gn, Alter::NATURAL },
+                { Spelling::An, Alter::NATURAL },
+                { Spelling::Bn, Alter::NATURAL },
+                { Spelling::Cs, Alter::SHARP },
+                { Spelling::Ds, Alter::SHARP },
+                { Spelling::Es, Alter::SHARP },
+                { Spelling::Fs, Alter::SHARP },
+                { Spelling::Gs, Alter::SHARP },
+                { Spelling::As, Alter::SHARP },
+                { Spelling::Bs, Alter::SHARP },
+                { Spelling::Cb, Alter::FLAT },
+                { Spelling::Db, Alter::FLAT },
+                { Spelling::Eb, Alter::FLAT },
+                { Spelling::Fb, Alter::FLAT },
+                { Spelling::Gb, Alter::FLAT },
+                { Spelling::Ab, Alter::FLAT },
+                { Spelling::Bb, Alter::FLAT },
+                { Spelling::Cx, Alter::DOUBLE_SHARP },
+                { Spelling::Dx, Alter::DOUBLE_SHARP },
+                { Spelling::Ex, Alter::DOUBLE_SHARP },
+                { Spelling::Fx, Alter::DOUBLE_SHARP },
+                { Spelling::Gx, Alter::DOUBLE_SHARP },
+                { Spelling::Ax, Alter::DOUBLE_SHARP },
+                { Spelling::Bx, Alter::DOUBLE_SHARP },
+                { Spelling::Cd, Alter::DOUBLE_FLAT },
+                { Spelling::Dd, Alter::DOUBLE_FLAT },
+                { Spelling::Ed, Alter::DOUBLE_FLAT },
+                { Spelling::Fd, Alter::DOUBLE_FLAT },
+                { Spelling::Gd, Alter::DOUBLE_FLAT },
+                { Spelling::Ad, Alter::DOUBLE_FLAT },
+                { Spelling::Bd, Alter::DOUBLE_FLAT },
+            };
+            
+            return pitchAlterMap;
+        }
     };
 
     inline int intSpelling( Spelling inValue )
@@ -263,62 +467,106 @@ namespace entropy
         return SpellingTables::getDefaultSpellingMap().at( inValue );
     }
 
-    enum class Step
+
+    inline Spelling spell( Step inStep, Alter inAlter )
     {
-        C,
-        D,
-        E,
-        F,
-        G,
-        A,
-        B,
-        ERROR,
-    };
+        switch ( inStep )
+        {
+            case Step::C:
+            {
+                switch ( inAlter )
+                {
+                    case Alter::NATURAL: return Spelling::Cn;
+                    case Alter::SHARP: return Spelling::Cs;
+                    case Alter::FLAT: return Spelling::Cb;
+                    case Alter::DOUBLE_SHARP: return Spelling::Cx;
+                    case Alter::DOUBLE_FLAT: return Spelling::Cd;
+                    default: return Spelling::ERROR;
+                }
+            }
+                break;
+            case Step::D:
+            {
+                switch ( inAlter )
+                {
+                    case Alter::NATURAL: return Spelling::Dn;
+                    case Alter::SHARP: return Spelling::Ds;
+                    case Alter::FLAT: return Spelling::Db;
+                    case Alter::DOUBLE_SHARP: return Spelling::Dx;
+                    case Alter::DOUBLE_FLAT: return Spelling::Dd;
+                    default: return Spelling::ERROR;
+                }
+            }
+                break;
+            case Step::E:
+            {
+                switch ( inAlter )
+                {
+                    case Alter::NATURAL: return Spelling::En;
+                    case Alter::SHARP: return Spelling::Es;
+                    case Alter::FLAT: return Spelling::Eb;
+                    case Alter::DOUBLE_SHARP: return Spelling::Ex;
+                    case Alter::DOUBLE_FLAT: return Spelling::Ed;
+                    default: return Spelling::ERROR;
+                }
+            }
+                break;
+            case Step::F:
+            {
+                switch ( inAlter )
+                {
+                    case Alter::NATURAL: return Spelling::Fn;
+                    case Alter::SHARP: return Spelling::Fs;
+                    case Alter::FLAT: return Spelling::Fb;
+                    case Alter::DOUBLE_SHARP: return Spelling::Fx;
+                    case Alter::DOUBLE_FLAT: return Spelling::Fd;
+                    default: return Spelling::ERROR;
+                }
+            }
+                break;
+            case Step::G:
+            {
+                switch ( inAlter )
+                {
+                    case Alter::NATURAL: return Spelling::Gn;
+                    case Alter::SHARP: return Spelling::Gs;
+                    case Alter::FLAT: return Spelling::Gb;
+                    case Alter::DOUBLE_SHARP: return Spelling::Gx;
+                    case Alter::DOUBLE_FLAT: return Spelling::Gd;
+                    default: return Spelling::ERROR;
+                }
+            }
+                break;
+            case Step::A:
+            {
+                switch ( inAlter )
+                {
+                    case Alter::NATURAL: return Spelling::An;
+                    case Alter::SHARP: return Spelling::As;
+                    case Alter::FLAT: return Spelling::Ab;
+                    case Alter::DOUBLE_SHARP: return Spelling::Ax;
+                    case Alter::DOUBLE_FLAT: return Spelling::Ad;
+                    default: return Spelling::ERROR;
+                }
+            }
+                break;
+            case Step::B:
+            {
+                switch ( inAlter )
+                {
+                    case Alter::NATURAL: return Spelling::Bn;
+                    case Alter::SHARP: return Spelling::Bs;
+                    case Alter::FLAT: return Spelling::Bb;
+                    case Alter::DOUBLE_SHARP: return Spelling::Bx;
+                    case Alter::DOUBLE_FLAT: return Spelling::Bd;
+                    default: return Spelling::ERROR;
+                }
+            }
+                break;
 
-    ENUM_TOSTR_BEGIN( Step )
-    ENUM_TOSTR_VALUE( Step, C )
-    ENUM_TOSTR_VALUE( Step, D )
-    ENUM_TOSTR_VALUE( Step, E )
-    ENUM_TOSTR_VALUE( Step, F )
-    ENUM_TOSTR_VALUE( Step, G )
-    ENUM_TOSTR_VALUE( Step, A )
-    ENUM_TOSTR_VALUE( Step, B )
-    ENUM_TOSTR_END;
-
-    ENUM_PARSE_BEGIN( Step )
-    ENUM_PARSE_VALUE( Step, A )
-    ENUM_PARSE_VALUE( Step, B )
-    ENUM_PARSE_VALUE( Step, C )
-    ENUM_PARSE_VALUE( Step, D )
-    ENUM_PARSE_VALUE( Step, E )
-    ENUM_PARSE_VALUE( Step, F )
-    ENUM_PARSE_VALUE( Step, G )
-    ENUM_PARSE_VALUE( Step, A )
-    ENUM_PARSE_VALUE( Step, B )
-    ENUM_PARSE_END;
-
-    enum class Alter
-    {
-        NATURAL,
-        SHARP,
-        FLAT,
-        DOUBLE_SHARP,
-        DOUBLE_FLAT,
-    };
-
-    ENUM_TOSTR_BEGIN( Alter )
-    ENUM_TOSTR_VALUE( Alter, NATURAL )
-    ENUM_TOSTR_VALUE( Alter, SHARP )
-    ENUM_TOSTR_VALUE( Alter, FLAT )
-    ENUM_TOSTR_VALUE( Alter, DOUBLE_SHARP )
-    ENUM_TOSTR_VALUE( Alter, DOUBLE_FLAT )
-    ENUM_TOSTR_END;
-
-    ENUM_PARSE_BEGIN( Alter )
-    ENUM_PARSE_VALUE( Alter, NATURAL )
-    ENUM_PARSE_VALUE( Alter, SHARP )
-    ENUM_PARSE_VALUE( Alter, FLAT )
-    ENUM_PARSE_VALUE( Alter, DOUBLE_SHARP )
-    ENUM_PARSE_VALUE( Alter, DOUBLE_FLAT )
-    ENUM_PARSE_END;
+            default:
+                return Spelling::ERROR;
+                break;
+        }
+    }
 }

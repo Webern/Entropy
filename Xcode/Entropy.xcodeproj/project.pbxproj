@@ -19,12 +19,13 @@
 		29685B511EBB7CF500450727 /* cpulTestRegistry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29685B241EBB782F00450727 /* cpulTestRegistry.cpp */; };
 		29685B521EBB7CF500450727 /* cpulTestResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29685B261EBB782F00450727 /* cpulTestResult.cpp */; };
 		29685B531EBB7CF500450727 /* cpulMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29685B2A1EBB782F00450727 /* cpulMain.cpp */; };
-		29685B541EBB7CFD00450727 /* InstrumentInfoTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29685B4A1EBB7AD700450727 /* InstrumentInfoTest.cpp */; };
+		29685B541EBB7CFD00450727 /* PitchClassTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29685B4A1EBB7AD700450727 /* PitchClassTest.cpp */; };
+		297355631EBC33CB0005EB5B /* PitchClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 297355611EBC33CB0005EB5B /* PitchClass.cpp */; };
+		297355641EBC33CB0005EB5B /* PitchClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 297355611EBC33CB0005EB5B /* PitchClass.cpp */; };
 		29922E601EB6F3EE00AD4CD3 /* EntropyMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29922E5F1EB6F3EE00AD4CD3 /* EntropyMain.cpp */; };
 		29922E631EB6F63B00AD4CD3 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29922E611EB6F63B00AD4CD3 /* Config.cpp */; };
 		29922EA81EB6F9CE00AD4CD3 /* MxmacOS in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		29922EA91EB6F9D200AD4CD3 /* MxmacOS in Frameworks */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
-		29922EAC1EB6FC8100AD4CD3 /* MxmacOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29922EAA1EB6FC0800AD4CD3 /* MxmacOS.framework */; };
 		29954E401EB83F13001F003D /* libEazyXml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29954E3F1EB83F13001F003D /* libEazyXml.a */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +33,7 @@
 		29685B0D1EBB775600450727 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
-			dstPath = usr/share/man/man1;
+			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
 				29685B181EBB778A00450727 /* MxmacOS in CopyFiles */,
@@ -45,7 +46,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				29922EAC1EB6FC8100AD4CD3 /* MxmacOS.framework in CopyFiles */,
 				29922EA81EB6F9CE00AD4CD3 /* MxmacOS in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,7 +73,9 @@
 		29685B281EBB782F00450727 /* cpulTestTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpulTestTimer.h; sourceTree = "<group>"; };
 		29685B291EBB782F00450727 /* cpulVsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpulVsTest.h; sourceTree = "<group>"; };
 		29685B2A1EBB782F00450727 /* cpulMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cpulMain.cpp; sourceTree = "<group>"; };
-		29685B4A1EBB7AD700450727 /* InstrumentInfoTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InstrumentInfoTest.cpp; sourceTree = "<group>"; };
+		29685B4A1EBB7AD700450727 /* PitchClassTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PitchClassTest.cpp; sourceTree = "<group>"; };
+		297355611EBC33CB0005EB5B /* PitchClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PitchClass.cpp; sourceTree = "<group>"; };
+		297355621EBC33CB0005EB5B /* PitchClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchClass.h; sourceTree = "<group>"; };
 		29922E4E1EB6F14300AD4CD3 /* Entropy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Entropy; sourceTree = BUILT_PRODUCTS_DIR; };
 		29922E5E1EB6F3EE00AD4CD3 /* Entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entropy.h; sourceTree = "<group>"; };
 		29922E5F1EB6F3EE00AD4CD3 /* EntropyMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntropyMain.cpp; sourceTree = "<group>"; };
@@ -111,7 +113,7 @@
 		29685B0A1EBB763000450727 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				29685B4A1EBB7AD700450727 /* InstrumentInfoTest.cpp */,
+				29685B4A1EBB7AD700450727 /* PitchClassTest.cpp */,
 			);
 			name = Test;
 			path = ../Sourcecode/EntropyTest;
@@ -180,6 +182,8 @@
 				29685B061EBADBD000450727 /* InstrumentInfo.h */,
 				29954E511EB854B6001F003D /* RandomDigits.h */,
 				29954E501EB84977001F003D /* Throw.h */,
+				297355611EBC33CB0005EB5B /* PitchClass.cpp */,
+				297355621EBC33CB0005EB5B /* PitchClass.h */,
 			);
 			name = Entropy;
 			path = ../Sourcecode/Entropy;
@@ -277,13 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29685B541EBB7CFD00450727 /* InstrumentInfoTest.cpp in Sources */,
+				29685B541EBB7CFD00450727 /* PitchClassTest.cpp in Sources */,
 				29685B4E1EBB7CF500450727 /* cpulFailure.cpp in Sources */,
 				29685B4F1EBB7CF500450727 /* cpulRun.cpp in Sources */,
 				29685B501EBB7CF500450727 /* cpulTest.cpp in Sources */,
 				29685B511EBB7CF500450727 /* cpulTestRegistry.cpp in Sources */,
 				29685B521EBB7CF500450727 /* cpulTestResult.cpp in Sources */,
 				29685B531EBB7CF500450727 /* cpulMain.cpp in Sources */,
+				297355641EBC33CB0005EB5B /* PitchClass.cpp in Sources */,
 				29685B4C1EBB7CE700450727 /* Config.cpp in Sources */,
 				29685B4D1EBB7CE700450727 /* InstrumentInfo.cpp in Sources */,
 			);
@@ -294,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29922E601EB6F3EE00AD4CD3 /* EntropyMain.cpp in Sources */,
+				297355631EBC33CB0005EB5B /* PitchClass.cpp in Sources */,
 				29922E631EB6F63B00AD4CD3 /* Config.cpp in Sources */,
 				29685B071EBADBD000450727 /* InstrumentInfo.cpp in Sources */,
 			);
@@ -477,6 +483,7 @@
 				29685B151EBB775600450727 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29922E491EB6F14300AD4CD3 /* Build configuration list for PBXProject "Entropy" */ = {
 			isa = XCConfigurationList;
