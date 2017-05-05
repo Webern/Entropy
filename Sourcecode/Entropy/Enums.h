@@ -3,6 +3,7 @@
 #pragma once
 
 #include <string>
+#include <map>
 
 #include "EnumMacros.h"
 
@@ -177,6 +178,52 @@ namespace entropy
         return Spelling::ERROR;
     }
 
+    struct SpellingTables
+    {
+        static const std::map<const Spelling, const int>& getPitchClassMap()
+        {
+            static std::map<const Spelling, const int> pitchClassMap =
+            {
+                { Spelling::Cn, 0  },
+                { Spelling::Dn, 2  },
+                { Spelling::En, 4  },
+                { Spelling::Fn, 5  },
+                { Spelling::Gn, 7  },
+                { Spelling::An, 9  },
+                { Spelling::Bn, 11 },
+                { Spelling::Cs, 1  },
+                { Spelling::Ds, 3  },
+                { Spelling::Es, 5  },
+                { Spelling::Fs, 6  },
+                { Spelling::Gs, 8  },
+                { Spelling::As, 10 },
+                { Spelling::Bs, 0  },
+                { Spelling::Cb, 11 },
+                { Spelling::Db, 1  },
+                { Spelling::Eb, 3  },
+                { Spelling::Fb, 4  },
+                { Spelling::Gb, 6  },
+                { Spelling::Ab, 8  },
+                { Spelling::Bb, 10 },
+                { Spelling::Cx, 2  },
+                { Spelling::Dx, 4  },
+                { Spelling::Ex, 6  },
+                { Spelling::Fx, 7  },
+                { Spelling::Gx, 9  },
+                { Spelling::Ax, 11 },
+                { Spelling::Bx, 1  },
+                { Spelling::Cd, 10 },
+                { Spelling::Dd, 0  },
+                { Spelling::Ed, 2  },
+                { Spelling::Fd, 3  },
+                { Spelling::Gd, 5  },
+                { Spelling::Ad, 7  },
+                { Spelling::Bd, 9  },
+            };
+
+            return pitchClassMap;
+        }
+    };
 
     enum class Step
     {
