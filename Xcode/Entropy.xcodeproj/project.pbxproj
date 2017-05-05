@@ -180,10 +180,10 @@
 				29685B081EBAE26700450727 /* Enums.h */,
 				29685B051EBADBD000450727 /* InstrumentInfo.cpp */,
 				29685B061EBADBD000450727 /* InstrumentInfo.h */,
-				29954E511EB854B6001F003D /* RandomDigits.h */,
-				29954E501EB84977001F003D /* Throw.h */,
 				297355611EBC33CB0005EB5B /* PitchClass.cpp */,
 				297355621EBC33CB0005EB5B /* PitchClass.h */,
+				29954E511EB854B6001F003D /* RandomDigits.h */,
+				29954E501EB84977001F003D /* Throw.h */,
 			);
 			name = Entropy;
 			path = ../Sourcecode/Entropy;
