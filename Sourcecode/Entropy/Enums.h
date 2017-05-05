@@ -223,7 +223,45 @@ namespace entropy
 
             return pitchClassMap;
         }
+
+        static const std::map<const int, const Spelling>& getDefaultSpellingMap()
+        {
+            static std::map<const int, const Spelling> defaultSpellingMap =
+            {
+                { 0 , Spelling::Cn },
+                { 1 , Spelling::Cs },
+                { 2 , Spelling::Dn },
+                { 3 , Spelling::Eb },
+                { 4 , Spelling::En },
+                { 5 , Spelling::Fn },
+                { 6 , Spelling::Fs },
+                { 7 , Spelling::Gn },
+                { 8 , Spelling::Ab },
+                { 9 , Spelling::An },
+                { 10, Spelling::Bb },
+                { 11, Spelling::Bn },
+            };
+
+            return defaultSpellingMap;
+        }
     };
+
+    inline int intSpelling( Spelling inValue )
+    {
+        ENTROPY_ASSERT( static_cast<int>( inValue ) >= static_cast<int>( Spelling::Cn ) );
+        ENTROPY_ASSERT( static_cast<int>( inValue ) < static_cast<int>( Spelling::ERROR ) );
+        return SpellingTables::getPitchClassMap().at( inValue );
+    }
+
+    inline Spelling intSpelling( int inValue )
+    {
+        if( inValue < 0 || inValue > 11 )
+        {
+            return Spelling::ERROR;
+        }
+
+        return SpellingTables::getDefaultSpellingMap().at( inValue );
+    }
 
     enum class Step
     {
@@ -257,5 +295,30 @@ namespace entropy
     ENUM_PARSE_VALUE( Step, G )
     ENUM_PARSE_VALUE( Step, A )
     ENUM_PARSE_VALUE( Step, B )
+    ENUM_PARSE_END;
+
+    enum class Alter
+    {
+        NATURAL,
+        SHARP,
+        FLAT,
+        DOUBLE_SHARP,
+        DOUBLE_FLAT,
+    };
+
+    ENUM_TOSTR_BEGIN( Alter )
+    ENUM_TOSTR_VALUE( Alter, NATURAL )
+    ENUM_TOSTR_VALUE( Alter, SHARP )
+    ENUM_TOSTR_VALUE( Alter, FLAT )
+    ENUM_TOSTR_VALUE( Alter, DOUBLE_SHARP )
+    ENUM_TOSTR_VALUE( Alter, DOUBLE_FLAT )
+    ENUM_TOSTR_END;
+
+    ENUM_PARSE_BEGIN( Alter )
+    ENUM_PARSE_VALUE( Alter, NATURAL )
+    ENUM_PARSE_VALUE( Alter, SHARP )
+    ENUM_PARSE_VALUE( Alter, FLAT )
+    ENUM_PARSE_VALUE( Alter, DOUBLE_SHARP )
+    ENUM_PARSE_VALUE( Alter, DOUBLE_FLAT )
     ENUM_PARSE_END;
 }
