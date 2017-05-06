@@ -1,5 +1,7 @@
 // Copyright (c) Matthew James Briggs
 
+#include <map>
+
 #include "Entropy/Config.h"
 #include "EazyXml/EazyXml.h"
 #include "Entropy/Throw.h"
@@ -32,6 +34,7 @@ namespace entropy
         }
 
         parseInput();
+        addInstrumentNumberSuffixes();
     }
 
 
@@ -50,6 +53,12 @@ namespace entropy
     const std::string& Config::getWorkTitle() const
     {
         return myWorkTitle;
+    }
+
+
+    const std::vector<InstrumentGroupInfo>& Config::getInstrumentGroups() const
+    {
+        return myInstrumentGroups;
     }
 
 
@@ -222,14 +231,96 @@ namespace entropy
         grp.backetType = it->getValue();
         ++it;
 
-
-
         ENTROPY_ASSERT( it != e );
         ENTROPY_ASSERT( it->getName() == "instruments" );
-        ENTROPY_ASSERT( it->getType() == ezx::XElementType::text );
-        //parseInstrument( *it, grp );
+        ENTROPY_ASSERT( it->getType() == ezx::XElementType::element );
+        parseIntruments( *it, grp );
         ++it;
 
         myInstrumentGroups.push_back( grp );
+    }
+
+
+    void
+    Config::parseIntruments( const ezx::XElement& inElement, InstrumentGroupInfo& outGroup )
+    {
+        ENTROPY_ASSERT( inElement.getName() == "instruments" );
+        ENTROPY_ASSERT( inElement.getType() == ezx::XElementType::element );
+        auto it = inElement.begin();
+        const auto e = inElement.end();
+        ENTROPY_ASSERT( it != e );
+
+        for( ; it != e; ++it )
+        {
+            outGroup.instruments.push_back( parseInstrument( *it ) );
+        }
+    }
+
+
+    InstrumentInfo Config::parseInstrument( const ezx::XElement& inElement )
+    {
+        ENTROPY_ASSERT( inElement.getName() == "instrument" );
+        ENTROPY_ASSERT( inElement.getType() == ezx::XElementType::empty );
+        const auto ait = inElement.attributesBegin();
+        const auto e = inElement.attributesEnd();
+        ENTROPY_ASSERT( ait != e );
+        ENTROPY_ASSERT( ait->getName() == "id" );
+        const auto valueStr = ait->getValue();
+        const auto value = stringInstrumentTypeID( valueStr );
+        const auto iter = std::find_if( std::cbegin( myInstrumentPrototypes ),
+                                        std::cend( myInstrumentPrototypes ),
+                                        [&]( const InstrumentInfo& inInfo )
+                                        {
+                                            return inInfo.instrumentTypeID == value;
+                                        } );
+        ENTROPY_ASSERT( iter != std::cend( myInstrumentPrototypes ) );
+        return *iter;
+    }
+
+
+    void Config::addInstrumentNumberSuffixes()
+    {
+        std::map<InstrumentTypeID, int> uniqueInstrumentTypes;
+
+        for( const auto& grp : myInstrumentGroups )
+        {
+            for( const auto& inst : grp.instruments )
+            {
+                const auto typ = inst.instrumentTypeID;
+                const auto it = uniqueInstrumentTypes.find( typ );
+
+                if( it == std::cend( uniqueInstrumentTypes ) )
+                {
+                    uniqueInstrumentTypes[typ] = 0;
+                }
+
+                ++uniqueInstrumentTypes[typ];
+            }
+        }
+
+        auto countdown = uniqueInstrumentTypes;
+
+        for( auto& grp : myInstrumentGroups )
+        {
+            for( auto& inst : grp.instruments )
+            {
+                const auto typ = inst.instrumentTypeID;
+                const auto it = countdown.find( typ );
+
+                if( it != std::cend( uniqueInstrumentTypes ) )
+                {
+                    const int total = uniqueInstrumentTypes.at( typ );
+                    const int remaining = it->second;
+                    const int current = total - remaining + 1;
+                    std::stringstream n;
+                    n << inst.name << " " << current;
+                    inst.name = n.str();
+                    std::stringstream abbr;
+                    abbr << inst.abbreviation << " " << current;
+                    inst.abbreviation = abbr.str();
+                    --it->second;
+                }
+            }
+        }
     }
 }

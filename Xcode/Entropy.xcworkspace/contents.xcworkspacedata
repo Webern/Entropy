@@ -15,7 +15,7 @@
       location = "container:../Working"
       name = "Working">
       <FileRef
-         location = "group:output.xml">
+         location = "group:/Users/mjb/Entropy/Working/entropy.xml">
       </FileRef>
       <FileRef
          location = "group:/Users/mjb/Entropy/Working/input.xml">

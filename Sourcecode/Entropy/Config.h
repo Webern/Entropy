@@ -21,6 +21,7 @@ namespace entropy
         const std::string& getInputFilePath() const;
         const std::string& getOutputFilePath() const;
         const std::string& getWorkTitle() const;
+        const std::vector<InstrumentGroupInfo>& getInstrumentGroups() const;
 
         static constexpr const char* const DEFAULT_INPUT = "./Config.entropy";
         static constexpr const char* const DEFAULT_OUTPUT = "./Entropy.xml";
@@ -41,6 +42,8 @@ namespace entropy
         void parseScoreSetup( const ezx::XElement& inElement );
         void parseInstrumentGroups( const ezx::XElement& inElement );
         void parseInstrumentGroup( const ezx::XElement& inElement );
-        //InstrumentInfo parseInstrument( const ezx::XElement& inElement );
+        void parseIntruments( const ezx::XElement& inElement, InstrumentGroupInfo& outGroup );
+        InstrumentInfo parseInstrument( const ezx::XElement& inElement );
+        void addInstrumentNumberSuffixes();
     };
 }
