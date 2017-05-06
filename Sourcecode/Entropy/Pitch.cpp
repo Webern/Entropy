@@ -1,5 +1,7 @@
 // Copyright (c) Matthew James Briggs
 
+#include <sstream>
+
 #include "Pitch.h"
 #include "Constants.h"
 
@@ -64,5 +66,33 @@ namespace entropy
         const auto oct = 12 * (getOctave() + 1);
         const auto result = pc + oct;
         return result;
+    }
+
+
+    bool Pitch::parse( const std::string& inValue )
+    {
+        const auto pos = inValue.find_first_of("0123456789-");
+
+        if( pos == std::string::npos )
+        {
+            return false;
+        }
+
+        const auto nameStr = inValue.substr( 0, inValue.size() - pos );
+        const auto octStr = inValue.substr( pos );
+
+        const auto spelling = stringSpelling( nameStr );
+
+        if( spelling == Spelling::ERROR )
+        {
+            return false;
+        }
+
+        std::stringstream ss{ octStr };
+        int oct = 0;
+        ss >> oct;
+        setOctave( oct );
+        mPitchClass.setSpelling( spelling );
+        return true;
     }
 }

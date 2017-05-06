@@ -37,5 +37,7 @@ namespace entropy
         void parseMetadata( const ezx::XElement& inElement );
         void parseInstrumentDictionary( const ezx::XElement& inElement );
         void parseInstrumentDefinition( const ezx::XElement& inElement );
+        void parseScoreSetup( const ezx::XElement& inElement );
+        void parseInstrumentGroup( const ezx::XElement& inElement );
     };
 }

@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "Entropy/Enums.h"
+#include "Entropy/Pitch.h"
 
 namespace entropy
 {
@@ -18,6 +19,16 @@ namespace entropy
         std::vector<ClefName> startingClefs;
         std::vector<ClefName> allowableClefs;
         std::string musicXmlSound;
+        Pitch rangeLow;
+        Pitch rangeHigh;
         int transposition;
+    };
+
+    class InstrumentGroupInfo
+    {
+    public:
+        std::string name;
+        std::string backetType;
+        std::vector<InstrumentInfo> instruments;
     };
 }

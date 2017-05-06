@@ -1,5 +1,7 @@
 // Copyright (c) Matthew James Briggs
 
+#include <sstream>
+
 #include "PitchClass.h"
 
 namespace entropy

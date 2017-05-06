@@ -18,6 +18,7 @@ namespace entropy
         const PitchClass& getPitchClass() const;
         void setPitchClass( const PitchClass inPitchClass );
         int getMidiNote() const;
+        bool parse( const std::string& inValue );
 
     private:
         PitchClass mPitchClass;

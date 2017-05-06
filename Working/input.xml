@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <entropy-input>
     <metadata>
-        <work-title>Bones the Cat</work-title>
+        <work-title>Entropy</work-title>
     </metadata>
     <instrument-dictionary>
         <instrument-definition instrument-id="VIOLIN">
@@ -68,7 +68,7 @@
     <score-setup>
         <instrument-group>
             <group-name>String Quartet</group-name>
-            <group-type>Bracket</group-type>
+            <group-type>BRACKET</group-type>
             <instrument>
                 <instrument id="VIOLIN"/>
                 <instrument id="VIOLIN"/>

@@ -72,6 +72,11 @@ namespace entropy
         parseInstrumentDictionary( *it );
         ++it;
 
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "score-setup" );
+        parseScoreSetup( *it );
+        ++it;
+
     }
 
 
@@ -148,6 +153,53 @@ namespace entropy
         instrument.transposition = std::stoi(it->getValue());
         ++it;
 
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "range-low" );
+        ENTROPY_ASSERT( it->getType() == ezx::XElementType::text );
+        const auto rangeLowStr = it->getValue();
+        if ( !instrument.rangeLow.parse( rangeLowStr ) )
+        {
+            instrument.rangeLow = Pitch( Spelling::Cn, -1 );
+        }
+        ++it;
+
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "range-high" );
+        ENTROPY_ASSERT( it->getType() == ezx::XElementType::text );
+        const auto rangeHighStr = it->getValue();
+        if ( !instrument.rangeHigh.parse( rangeHighStr ) )
+        {
+            instrument.rangeHigh = Pitch( Spelling::Cn, 9 );
+        }
+        ++it;
+
         myInstrumentPrototypes.emplace_back( std::move( instrument ) );
+    }
+
+
+    void Config::parseScoreSetup( const ezx::XElement& inElement )
+    {
+        ENTROPY_ASSERT( inElement.getName() == "score-setup" );
+        ENTROPY_ASSERT( inElement.getType() == ezx::XElementType::element );
+        auto it = inElement.begin();
+        const auto e = inElement.end();
+
+        for ( ; it != e; ++it )
+        {
+            parseInstrumentGroup( *it );
+        }
+    }
+
+
+    void Config::parseInstrumentGroup( const ezx::XElement& inElement )
+    {
+        ENTROPY_ASSERT( inElement.getName() == "instrument-group" );
+        ENTROPY_ASSERT( inElement.getType() == ezx::XElementType::element );
+        auto it = inElement.begin();
+        const auto e = inElement.end();
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "group-name" );
+        ENTROPY_ASSERT( it->getType() == ezx::XElementType::text );
+        InstrumentGroupInfo grp;
     }
 }
