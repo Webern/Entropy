@@ -4,12 +4,92 @@
   <work>
     <work-title>Entropy</work-title>
   </work>
+  <identification>
+    <creator type="composer">Matthew James Briggs</creator>
+    <rights type="copyright">© 2017 by Matthew James Briggs</rights>
+  </identification>
   <part-list>
-    <score-part id="ID">
-      <part-name />
+    <part-group type="start">
+      <group-name>String Quartet</group-name>
+      <group-symbol>bracket</group-symbol>
+      <group-barline>yes</group-barline>
+    </part-group>
+    <score-part id="VIOLIN_PART_INDEX_0">
+      <part-name print-object="no">Violin 1</part-name>
+      <part-abbreviation print-object="no">Vln. 1</part-abbreviation>
     </score-part>
+    <score-part id="VIOLIN_PART_INDEX_1">
+      <part-name print-object="no">Violin 2</part-name>
+      <part-abbreviation print-object="no">Vln. 2</part-abbreviation>
+    </score-part>
+    <score-part id="VIOLA_PART_INDEX_2">
+      <part-name print-object="no">Viola 1</part-name>
+      <part-abbreviation print-object="no">Vla. 1</part-abbreviation>
+    </score-part>
+    <score-part id="CELLO_PART_INDEX_3">
+      <part-name print-object="no">Cello 1</part-name>
+      <part-abbreviation print-object="no">Vlc. 1</part-abbreviation>
+    </score-part>
+    <part-group type="stop" />
   </part-list>
-  <part id="ID">
-    <measure number="" />
+  <part id="VIOLIN_PART_INDEX_0">
+    <measure number="1">
+      <attributes>
+        <divisions>2520</divisions>
+        <time print-object="yes">
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+    </measure>
+  </part>
+  <part id="VIOLIN_PART_INDEX_1">
+    <measure number="1">
+      <attributes>
+        <divisions>2520</divisions>
+        <time print-object="yes">
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+    </measure>
+  </part>
+  <part id="VIOLA_PART_INDEX_2">
+    <measure number="1">
+      <attributes>
+        <divisions>2520</divisions>
+        <time print-object="yes">
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>C</sign>
+          <line>3</line>
+        </clef>
+      </attributes>
+    </measure>
+  </part>
+  <part id="CELLO_PART_INDEX_3">
+    <measure number="1">
+      <attributes>
+        <divisions>2520</divisions>
+        <time print-object="yes">
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>F</sign>
+          <line>4</line>
+        </clef>
+      </attributes>
+    </measure>
   </part>
 </score-partwise>

@@ -6,3 +6,6 @@ namespace entropy
 {
     #define EN_UNUSED(x) (void)(x);
 }
+
+#include "Constants.h"
+#include "Enums.h"
