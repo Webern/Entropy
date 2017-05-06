@@ -10,6 +10,9 @@
 		2928461B1EBE1E6D00A3D66B /* Duration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 292846191EBE1E6D00A3D66B /* Duration.cpp */; };
 		2928461C1EBE1E6D00A3D66B /* Duration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 292846191EBE1E6D00A3D66B /* Duration.cpp */; };
 		2928461E1EBE297000A3D66B /* DurationTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2928461D1EBE297000A3D66B /* DurationTest.cpp */; };
+		292846211EBE371C00A3D66B /* Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2928461F1EBE371C00A3D66B /* Score.cpp */; };
+		292846221EBE371C00A3D66B /* Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2928461F1EBE371C00A3D66B /* Score.cpp */; };
+		292846241EBE37B600A3D66B /* ScoreTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 292846231EBE37B600A3D66B /* ScoreTest.cpp */; };
 		29685B071EBADBD000450727 /* InstrumentInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29685B051EBADBD000450727 /* InstrumentInfo.cpp */; };
 		29685B161EBB776700450727 /* MxmacOS in Frameworks */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		29685B171EBB776B00450727 /* libEazyXml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29954E3F1EB83F13001F003D /* libEazyXml.a */; };
@@ -62,6 +65,9 @@
 		292846191EBE1E6D00A3D66B /* Duration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Duration.cpp; sourceTree = "<group>"; };
 		2928461A1EBE1E6D00A3D66B /* Duration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Duration.h; sourceTree = "<group>"; };
 		2928461D1EBE297000A3D66B /* DurationTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DurationTest.cpp; sourceTree = "<group>"; };
+		2928461F1EBE371C00A3D66B /* Score.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Score.cpp; sourceTree = "<group>"; };
+		292846201EBE371C00A3D66B /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		292846231EBE37B600A3D66B /* ScoreTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScoreTest.cpp; sourceTree = "<group>"; };
 		29685B051EBADBD000450727 /* InstrumentInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InstrumentInfo.cpp; sourceTree = "<group>"; };
 		29685B061EBADBD000450727 /* InstrumentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentInfo.h; sourceTree = "<group>"; };
 		29685B081EBAE26700450727 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 				29685B4A1EBB7AD700450727 /* PitchClassTest.cpp */,
 				29ED5B441EBD68770003822B /* PitchTest.cpp */,
 				2928461D1EBE297000A3D66B /* DurationTest.cpp */,
+				292846231EBE37B600A3D66B /* ScoreTest.cpp */,
 			);
 			name = Test;
 			path = ../Sourcecode/EntropyTest;
@@ -204,6 +211,8 @@
 				297355621EBC33CB0005EB5B /* PitchClass.h */,
 				29954E511EB854B6001F003D /* RandomDigits.h */,
 				29954E501EB84977001F003D /* Throw.h */,
+				2928461F1EBE371C00A3D66B /* Score.cpp */,
+				292846201EBE371C00A3D66B /* Score.h */,
 			);
 			name = Entropy;
 			path = ../Sourcecode/Entropy;
@@ -304,12 +313,14 @@
 				29685B541EBB7CFD00450727 /* PitchClassTest.cpp in Sources */,
 				29685B4E1EBB7CF500450727 /* cpulFailure.cpp in Sources */,
 				29ED5B451EBD68770003822B /* PitchTest.cpp in Sources */,
+				292846221EBE371C00A3D66B /* Score.cpp in Sources */,
 				29685B4F1EBB7CF500450727 /* cpulRun.cpp in Sources */,
 				29685B501EBB7CF500450727 /* cpulTest.cpp in Sources */,
 				2928461C1EBE1E6D00A3D66B /* Duration.cpp in Sources */,
 				29685B511EBB7CF500450727 /* cpulTestRegistry.cpp in Sources */,
 				2928461E1EBE297000A3D66B /* DurationTest.cpp in Sources */,
 				29685B521EBB7CF500450727 /* cpulTestResult.cpp in Sources */,
+				292846241EBE37B600A3D66B /* ScoreTest.cpp in Sources */,
 				29685B531EBB7CF500450727 /* cpulMain.cpp in Sources */,
 				297355641EBC33CB0005EB5B /* PitchClass.cpp in Sources */,
 				29685B4C1EBB7CE700450727 /* Config.cpp in Sources */,
@@ -328,6 +339,7 @@
 				297355631EBC33CB0005EB5B /* PitchClass.cpp in Sources */,
 				29922E631EB6F63B00AD4CD3 /* Config.cpp in Sources */,
 				29685B071EBADBD000450727 /* InstrumentInfo.cpp in Sources */,
+				292846211EBE371C00A3D66B /* Score.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
