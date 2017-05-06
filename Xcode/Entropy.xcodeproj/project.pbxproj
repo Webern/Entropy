@@ -27,6 +27,9 @@
 		29922EA81EB6F9CE00AD4CD3 /* MxmacOS in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		29922EA91EB6F9D200AD4CD3 /* MxmacOS in Frameworks */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		29954E401EB83F13001F003D /* libEazyXml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29954E3F1EB83F13001F003D /* libEazyXml.a */; };
+		29ED5B411EBD65070003822B /* Pitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29ED5B3F1EBD65070003822B /* Pitch.cpp */; };
+		29ED5B421EBD65070003822B /* Pitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29ED5B3F1EBD65070003822B /* Pitch.cpp */; };
+		29ED5B451EBD68770003822B /* PitchTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29ED5B441EBD68770003822B /* PitchTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +89,10 @@
 		29954E3F1EB83F13001F003D /* libEazyXml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEazyXml.a; path = Ezx/build/Debug/libEazyXml.a; sourceTree = "<group>"; };
 		29954E501EB84977001F003D /* Throw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Throw.h; sourceTree = "<group>"; };
 		29954E511EB854B6001F003D /* RandomDigits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomDigits.h; sourceTree = "<group>"; };
+		29ED5B3F1EBD65070003822B /* Pitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pitch.cpp; sourceTree = "<group>"; };
+		29ED5B401EBD65070003822B /* Pitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pitch.h; sourceTree = "<group>"; };
+		29ED5B431EBD653B0003822B /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		29ED5B441EBD68770003822B /* PitchTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PitchTest.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				29685B4A1EBB7AD700450727 /* PitchClassTest.cpp */,
+				29ED5B441EBD68770003822B /* PitchTest.cpp */,
 			);
 			name = Test;
 			path = ../Sourcecode/EntropyTest;
@@ -175,11 +183,14 @@
 			children = (
 				29922E611EB6F63B00AD4CD3 /* Config.cpp */,
 				29922E621EB6F63B00AD4CD3 /* Config.h */,
+				29ED5B431EBD653B0003822B /* Constants.h */,
 				29922E5E1EB6F3EE00AD4CD3 /* Entropy.h */,
 				29685B091EBAE7B000450727 /* EnumMacros.h */,
 				29685B081EBAE26700450727 /* Enums.h */,
 				29685B051EBADBD000450727 /* InstrumentInfo.cpp */,
 				29685B061EBADBD000450727 /* InstrumentInfo.h */,
+				29ED5B3F1EBD65070003822B /* Pitch.cpp */,
+				29ED5B401EBD65070003822B /* Pitch.h */,
 				297355611EBC33CB0005EB5B /* PitchClass.cpp */,
 				297355621EBC33CB0005EB5B /* PitchClass.h */,
 				29954E511EB854B6001F003D /* RandomDigits.h */,
@@ -283,6 +294,7 @@
 			files = (
 				29685B541EBB7CFD00450727 /* PitchClassTest.cpp in Sources */,
 				29685B4E1EBB7CF500450727 /* cpulFailure.cpp in Sources */,
+				29ED5B451EBD68770003822B /* PitchTest.cpp in Sources */,
 				29685B4F1EBB7CF500450727 /* cpulRun.cpp in Sources */,
 				29685B501EBB7CF500450727 /* cpulTest.cpp in Sources */,
 				29685B511EBB7CF500450727 /* cpulTestRegistry.cpp in Sources */,
@@ -290,6 +302,7 @@
 				29685B531EBB7CF500450727 /* cpulMain.cpp in Sources */,
 				297355641EBC33CB0005EB5B /* PitchClass.cpp in Sources */,
 				29685B4C1EBB7CE700450727 /* Config.cpp in Sources */,
+				29ED5B421EBD65070003822B /* Pitch.cpp in Sources */,
 				29685B4D1EBB7CE700450727 /* InstrumentInfo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29922E601EB6F3EE00AD4CD3 /* EntropyMain.cpp in Sources */,
+				29ED5B411EBD65070003822B /* Pitch.cpp in Sources */,
 				297355631EBC33CB0005EB5B /* PitchClass.cpp in Sources */,
 				29922E631EB6F63B00AD4CD3 /* Config.cpp in Sources */,
 				29685B071EBADBD000450727 /* InstrumentInfo.cpp in Sources */,
