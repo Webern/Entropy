@@ -267,13 +267,13 @@ namespace entropy
         ENTROPY_ASSERT( ait->getName() == "id" );
         const auto valueStr = ait->getValue();
         const auto value = stringInstrumentTypeID( valueStr );
-        const auto iter = std::find_if( std::cbegin( myInstrumentPrototypes ),
-                                        std::cend( myInstrumentPrototypes ),
+        const auto iter = std::find_if( std::begin( myInstrumentPrototypes ),
+                                        std::end( myInstrumentPrototypes ),
                                         [&]( const InstrumentInfo& inInfo )
                                         {
                                             return inInfo.instrumentTypeID == value;
                                         } );
-        ENTROPY_ASSERT( iter != std::cend( myInstrumentPrototypes ) );
+        ENTROPY_ASSERT( iter != std::end( myInstrumentPrototypes ) );
         return *iter;
     }
 
@@ -289,7 +289,7 @@ namespace entropy
                 const auto typ = inst.instrumentTypeID;
                 const auto it = uniqueInstrumentTypes.find( typ );
 
-                if( it == std::cend( uniqueInstrumentTypes ) )
+                if( it == std::end( uniqueInstrumentTypes ) )
                 {
                     uniqueInstrumentTypes[typ] = 0;
                 }
@@ -307,7 +307,7 @@ namespace entropy
                 const auto typ = inst.instrumentTypeID;
                 const auto it = countdown.find( typ );
 
-                if( it != std::cend( uniqueInstrumentTypes ) )
+                if( it != std::end( uniqueInstrumentTypes ) )
                 {
                     const int total = uniqueInstrumentTypes.at( typ );
 
