@@ -17,18 +17,34 @@
     <score-part id="VIOLIN_PART_INDEX_0">
       <part-name print-object="no">Violin 1</part-name>
       <part-abbreviation print-object="no">Vln. 1</part-abbreviation>
+      <score-instrument id="I_VIOLIN_PART_INDEX_0">
+        <instrument-name>Violin 1</instrument-name>
+        <instrument-sound>strings.violin</instrument-sound>
+      </score-instrument>
     </score-part>
     <score-part id="VIOLIN_PART_INDEX_1">
       <part-name print-object="no">Violin 2</part-name>
       <part-abbreviation print-object="no">Vln. 2</part-abbreviation>
+      <score-instrument id="I_VIOLIN_PART_INDEX_1">
+        <instrument-name>Violin 2</instrument-name>
+        <instrument-sound>strings.violin</instrument-sound>
+      </score-instrument>
     </score-part>
     <score-part id="VIOLA_PART_INDEX_2">
-      <part-name print-object="no">Viola 1</part-name>
-      <part-abbreviation print-object="no">Vla. 1</part-abbreviation>
+      <part-name print-object="no">Viola</part-name>
+      <part-abbreviation print-object="no">Vla.</part-abbreviation>
+      <score-instrument id="I_VIOLA_PART_INDEX_2">
+        <instrument-name>Viola</instrument-name>
+        <instrument-sound>strings.viola</instrument-sound>
+      </score-instrument>
     </score-part>
     <score-part id="CELLO_PART_INDEX_3">
-      <part-name print-object="no">Cello 1</part-name>
-      <part-abbreviation print-object="no">Vlc. 1</part-abbreviation>
+      <part-name print-object="no">Cello</part-name>
+      <part-abbreviation print-object="no">Vlc.</part-abbreviation>
+      <score-instrument id="I_CELLO_PART_INDEX_3">
+        <instrument-name>Cello</instrument-name>
+        <instrument-sound>strings.cello</instrument-sound>
+      </score-instrument>
     </score-part>
     <part-group type="stop" />
   </part-list>
@@ -45,6 +61,42 @@
           <line>2</line>
         </clef>
       </attributes>
+      <note>
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>F</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
     </measure>
   </part>
   <part id="VIOLIN_PART_INDEX_1">
@@ -60,6 +112,42 @@
           <line>2</line>
         </clef>
       </attributes>
+      <note>
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
     </measure>
   </part>
   <part id="VIOLA_PART_INDEX_2">
@@ -75,6 +163,42 @@
           <line>3</line>
         </clef>
       </attributes>
+      <note>
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
     </measure>
   </part>
   <part id="CELLO_PART_INDEX_3">
@@ -90,6 +214,42 @@
           <line>4</line>
         </clef>
       </attributes>
+      <note>
+        <pitch>
+          <step>D</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>F</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>D</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note>
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
     </measure>
   </part>
 </score-partwise>

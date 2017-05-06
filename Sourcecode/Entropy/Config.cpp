@@ -310,14 +310,18 @@ namespace entropy
                 if( it != std::cend( uniqueInstrumentTypes ) )
                 {
                     const int total = uniqueInstrumentTypes.at( typ );
-                    const int remaining = it->second;
-                    const int current = total - remaining + 1;
-                    std::stringstream n;
-                    n << inst.name << " " << current;
-                    inst.name = n.str();
-                    std::stringstream abbr;
-                    abbr << inst.abbreviation << " " << current;
-                    inst.abbreviation = abbr.str();
+
+                    if( total > 1 )
+                    {
+                        const int remaining = it->second;
+                        const int current = total - remaining + 1;
+                        std::stringstream n;
+                        n << inst.name << " " << current;
+                        inst.name = n.str();
+                        std::stringstream abbr;
+                        abbr << inst.abbreviation << " " << current;
+                        inst.abbreviation = abbr.str();
+                    }
                     --it->second;
                 }
             }

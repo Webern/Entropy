@@ -24,6 +24,8 @@ int main( int argc, const char* argv[] )
     timeSig.beatType = 4;
     timeSig.isImplicit = false;
     timeSig.display = mx::api::Bool::yes;
+
+    std::vector<std::string> part_ids;
     
     for( const auto& grp : grps )
     {
@@ -33,8 +35,12 @@ int main( int argc, const char* argv[] )
         {
             mx::api::PartData part{};
             part.uniqueId = std::string{ entropy::stringInstrumentTypeID( inst.instrumentTypeID ) } + std::string{ "_PART_INDEX_" } + std::to_string(instrumentIndex);
+            part_ids.push_back( part.uniqueId );
             part.name = inst.name;
             part.abbreviation = inst.abbreviation;
+            part.instrumentData.uniqueId = std::string{ "I_" } + part.uniqueId;
+            part.instrumentData.sound = inst.musicXmlSound;
+            part.instrumentData.name = inst.name;
             mx::api::MeasureData measure;
 
             for( const auto& clef : inst.startingClefs )
@@ -80,6 +86,72 @@ int main( int argc, const char* argv[] )
         pg.lastPartIndex = stop;
         scoreData.partGroups.push_back( pg );
     }
+
+    mx::api::NoteData note{};
+    note.durationData.durationTimeTicks = entropy::TICKS_PER_QUARTER;
+    auto voiceP = &scoreData.parts.at(0).measures.at(0).staves.at(0).voices[0];
+    note.pitchData.octave = 5;
+    note.pitchData.step = mx::api::Step::a;
+    note.durationData.durationName = mx::api::DurationName::quarter;
+    note.tickTimePosition = 0;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::b;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::e;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::f;
+    voiceP->notes.push_back( note );
+
+    voiceP = &scoreData.parts.at(1).measures.at(0).staves.at(0).voices[0];
+    note.pitchData.octave = 4;
+    note.pitchData.step = mx::api::Step::c;
+    note.durationData.durationName = mx::api::DurationName::quarter;
+    note.tickTimePosition = 0;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::g;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::d;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::b;
+    voiceP->notes.push_back( note );
+
+    voiceP = &scoreData.parts.at(2).measures.at(0).staves.at(0).voices[0];
+    note.pitchData.octave = 3;
+    note.pitchData.step = mx::api::Step::e;
+    note.durationData.durationName = mx::api::DurationName::quarter;
+    note.tickTimePosition = 0;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::e;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::f;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::e;
+    voiceP->notes.push_back( note );
+
+    voiceP = &scoreData.parts.at(3).measures.at(0).staves.at(0).voices[0];
+    note.pitchData.octave = 2;
+    note.pitchData.step = mx::api::Step::d;
+    note.durationData.durationName = mx::api::DurationName::quarter;
+    note.tickTimePosition = 0;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::f;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::d;
+    voiceP->notes.push_back( note );
+    note.tickTimePosition += entropy::TICKS_PER_QUARTER;
+    note.pitchData.step = mx::api::Step::g;
+    voiceP->notes.push_back( note );
 
     // save the document
     auto& docMgr = mx::api::DocumentManager::getInstance();
