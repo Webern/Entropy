@@ -31,6 +31,7 @@ namespace entropy
         std::string myOutputFilePath;
         std::string myWorkTitle;
         std::vector<InstrumentInfo> myInstrumentPrototypes;
+        std::vector<InstrumentGroupInfo> myInstrumentGroups;
         
     private:
         void parseInput();
@@ -38,6 +39,8 @@ namespace entropy
         void parseInstrumentDictionary( const ezx::XElement& inElement );
         void parseInstrumentDefinition( const ezx::XElement& inElement );
         void parseScoreSetup( const ezx::XElement& inElement );
+        void parseInstrumentGroups( const ezx::XElement& inElement );
         void parseInstrumentGroup( const ezx::XElement& inElement );
+        //InstrumentInfo parseInstrument( const ezx::XElement& inElement );
     };
 }

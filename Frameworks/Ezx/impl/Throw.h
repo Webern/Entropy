@@ -19,7 +19,7 @@
 #endif
 
 #ifndef EASYXML_THROW
-#define EASYXML_THROW(throw_error_message)                   \
+#define EASYXML_THROW(throw_error_message)              \
 throw std::runtime_error (                              \
   std::string( "error in " )                            \
 + std::string( __FILENAME__ )                           \

@@ -66,15 +66,17 @@
         </instrument-definition>
     </instrument-dictionary>
     <score-setup>
-        <instrument-group>
-            <group-name>String Quartet</group-name>
-            <group-type>BRACKET</group-type>
-            <instrument>
-                <instrument id="VIOLIN"/>
-                <instrument id="VIOLIN"/>
-                <instrument id="VIOLA"/>
-                <instrument id="CELLO"/>
-            </instrument>
-        </instrument-group>
+        <instrument-groups>
+            <instrument-group>
+                <group-name>String Quartet</group-name>
+                <group-type>BRACKET</group-type>
+                <instruments>
+                    <instrument id="VIOLIN"/>
+                    <instrument id="VIOLIN"/>
+                    <instrument id="VIOLA"/>
+                    <instrument id="CELLO"/>
+                </instruments>
+            </instrument-group>
+        </instrument-groups>
     </score-setup>
 </entropy-input>

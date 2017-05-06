@@ -9,6 +9,7 @@ namespace entropy
     Config::Config( int argc, const char* argv[] )
     : myInputFilePath{}
     , myOutputFilePath{}
+    , myInstrumentGroups{}
     {
         myAppPath = argv[0];
 
@@ -184,7 +185,18 @@ namespace entropy
         auto it = inElement.begin();
         const auto e = inElement.end();
 
-        for ( ; it != e; ++it )
+        ENTROPY_ASSERT( it != e );
+        parseInstrumentGroups( *it );
+    }
+
+
+    void Config::parseInstrumentGroups( const ezx::XElement& inElement )
+    {
+        ENTROPY_ASSERT( inElement.getName() == "instrument-groups" );
+        ENTROPY_ASSERT( inElement.getType() == ezx::XElementType::element );
+        auto it = inElement.begin();
+        const auto e = inElement.end();
+        for( ; it != e; ++it )
         {
             parseInstrumentGroup( *it );
         }
@@ -201,5 +213,23 @@ namespace entropy
         ENTROPY_ASSERT( it->getName() == "group-name" );
         ENTROPY_ASSERT( it->getType() == ezx::XElementType::text );
         InstrumentGroupInfo grp;
+        grp.name = it->getValue();
+        ++it;
+
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "group-type" );
+        ENTROPY_ASSERT( it->getType() == ezx::XElementType::text );
+        grp.backetType = it->getValue();
+        ++it;
+
+
+
+        ENTROPY_ASSERT( it != e );
+        ENTROPY_ASSERT( it->getName() == "instruments" );
+        ENTROPY_ASSERT( it->getType() == ezx::XElementType::text );
+        //parseInstrument( *it, grp );
+        ++it;
+
+        myInstrumentGroups.push_back( grp );
     }
 }
