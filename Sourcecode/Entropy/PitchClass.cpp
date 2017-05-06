@@ -5,8 +5,7 @@
 namespace entropy
 {
     PitchClass::PitchClass()
-    : mValue{ 0 }
-    , mSpelling{ Spelling::Cn }
+    : mSpelling{ Spelling::Cn }
     {
         
     }
@@ -28,7 +27,7 @@ namespace entropy
 
     int PitchClass::getValue() const
     {
-        return mValue;
+        return intSpelling( mSpelling );
     }
 
 
@@ -36,17 +35,14 @@ namespace entropy
     {
         if ( inValue < 0 )
         {
-            mValue = 0;
             mSpelling = intSpelling( 0 );
         }
         else if ( inValue > 11 )
         {
-            mValue = 11;
             mSpelling = intSpelling( 11 );
         }
         else
         {
-            mValue = inValue;
             mSpelling = intSpelling( inValue );
         }
     }
@@ -61,7 +57,6 @@ namespace entropy
     void PitchClass::setSpelling( Spelling inValue )
     {
         mSpelling = inValue;
-        mValue = intSpelling( inValue );
     }
 
 

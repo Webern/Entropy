@@ -25,7 +25,6 @@ namespace entropy
         void setAlterAmount( int inValue );
 
     private:
-        int mValue;
         Spelling mSpelling;
     };
 }
