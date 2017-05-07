@@ -11,7 +11,7 @@ int main( int argc, const char* argv[] )
 {
     entropy::Config config{ argc, argv };
     auto score = config.getScoreSetup();
-    auto scoreData = score.getScoreData();
+    auto scoreData = score->getScoreData();
 
     mx::api::NoteData note{};
     note.durationData.durationTimeTicks = entropy::TICKS_PER_QUARTER;

@@ -63,7 +63,7 @@ namespace entropy
     }
 
 
-    Score Config::getScoreSetup() const
+    ScorePtr Config::getScoreSetup() const
     {
         mx::api::ScoreData scoreData;
         scoreData.workTitle = getWorkTitle();
@@ -141,9 +141,9 @@ namespace entropy
             pg.lastPartIndex = stop;
             scoreData.partGroups.push_back( pg );
         }
-        Score result;
-        result.setScoreData( std::move(scoreData) );
-        return result;
+        auto outScore = std::make_shared<Score>();
+        outScore->setScoreData( std::move(scoreData) );
+        return outScore;
     }
 
 

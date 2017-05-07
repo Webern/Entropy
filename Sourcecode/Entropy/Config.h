@@ -24,7 +24,7 @@ namespace entropy
         const std::string& getWorkTitle() const;
         const std::vector<InstrumentGroupInfo>& getInstrumentGroups() const;
 
-        Score getScoreSetup() const;
+        ScorePtr getScoreSetup() const;
 
         static constexpr const char* const DEFAULT_INPUT = "./Config.entropy";
         static constexpr const char* const DEFAULT_OUTPUT = "./Entropy.xml";

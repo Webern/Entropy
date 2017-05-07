@@ -7,10 +7,12 @@
 
 namespace entropy
 {
+    class Score;
+    using ScorePtr = std::shared_ptr<Score>;
+    
     class Score
     {
     public:
-
         void setScoreData( mx::api::ScoreData inScoreData );
         mx::api::ScoreData getScoreData() const;
 

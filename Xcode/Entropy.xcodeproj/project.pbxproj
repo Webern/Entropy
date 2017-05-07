@@ -15,6 +15,8 @@
 		292846241EBE37B600A3D66B /* ScoreTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 292846231EBE37B600A3D66B /* ScoreTest.cpp */; };
 		293BBAF51EBEF4850094A537 /* MxmacOS in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		293BBAF61EBEF5100094A537 /* MxmacOS in Frameworks */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
+		293BBB021EBF83330094A537 /* Position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 293BBB001EBF83330094A537 /* Position.cpp */; };
+		293BBB031EBF83330094A537 /* Position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 293BBB001EBF83330094A537 /* Position.cpp */; };
 		29685B071EBADBD000450727 /* InstrumentInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29685B051EBADBD000450727 /* InstrumentInfo.cpp */; };
 		29685B171EBB776B00450727 /* libEazyXml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29954E3F1EB83F13001F003D /* libEazyXml.a */; };
 		29685B4C1EBB7CE700450727 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29922E611EB6F63B00AD4CD3 /* Config.cpp */; };
@@ -68,6 +70,8 @@
 		2928461F1EBE371C00A3D66B /* Score.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Score.cpp; sourceTree = "<group>"; };
 		292846201EBE371C00A3D66B /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		292846231EBE37B600A3D66B /* ScoreTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScoreTest.cpp; sourceTree = "<group>"; };
+		293BBB001EBF83330094A537 /* Position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Position.cpp; sourceTree = "<group>"; };
+		293BBB011EBF83330094A537 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
 		29685B051EBADBD000450727 /* InstrumentInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InstrumentInfo.cpp; sourceTree = "<group>"; };
 		29685B061EBADBD000450727 /* InstrumentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentInfo.h; sourceTree = "<group>"; };
 		29685B081EBAE26700450727 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 				29954E501EB84977001F003D /* Throw.h */,
 				2928461F1EBE371C00A3D66B /* Score.cpp */,
 				292846201EBE371C00A3D66B /* Score.h */,
+				293BBB001EBF83330094A537 /* Position.cpp */,
+				293BBB011EBF83330094A537 /* Position.h */,
 			);
 			name = Entropy;
 			path = ../Sourcecode/Entropy;
@@ -315,6 +321,7 @@
 				29ED5B451EBD68770003822B /* PitchTest.cpp in Sources */,
 				292846221EBE371C00A3D66B /* Score.cpp in Sources */,
 				29685B4F1EBB7CF500450727 /* cpulRun.cpp in Sources */,
+				293BBB031EBF83330094A537 /* Position.cpp in Sources */,
 				29685B501EBB7CF500450727 /* cpulTest.cpp in Sources */,
 				2928461C1EBE1E6D00A3D66B /* Duration.cpp in Sources */,
 				29685B511EBB7CF500450727 /* cpulTestRegistry.cpp in Sources */,
@@ -335,6 +342,7 @@
 			files = (
 				29922E601EB6F3EE00AD4CD3 /* EntropyMain.cpp in Sources */,
 				2928461B1EBE1E6D00A3D66B /* Duration.cpp in Sources */,
+				293BBB021EBF83330094A537 /* Position.cpp in Sources */,
 				29ED5B411EBD65070003822B /* Pitch.cpp in Sources */,
 				297355631EBC33CB0005EB5B /* PitchClass.cpp in Sources */,
 				29922E631EB6F63B00AD4CD3 /* Config.cpp in Sources */,
