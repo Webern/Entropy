@@ -13,7 +13,6 @@
 		292846211EBE371C00A3D66B /* Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2928461F1EBE371C00A3D66B /* Score.cpp */; };
 		292846221EBE371C00A3D66B /* Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2928461F1EBE371C00A3D66B /* Score.cpp */; };
 		292846241EBE37B600A3D66B /* ScoreTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 292846231EBE37B600A3D66B /* ScoreTest.cpp */; };
-		293BBAF41EBEF4730094A537 /* MxmacOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29922EAA1EB6FC0800AD4CD3 /* MxmacOS.framework */; };
 		293BBAF51EBEF4850094A537 /* MxmacOS in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		293BBAF61EBEF5100094A537 /* MxmacOS in Frameworks */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		29685B071EBADBD000450727 /* InstrumentInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29685B051EBADBD000450727 /* InstrumentInfo.cpp */; };
@@ -43,18 +42,17 @@
 		29685B0D1EBB775600450727 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
-			dstPath = "";
+			dstPath = MxmacOS.framework/Versions/A;
 			dstSubfolderSpec = 16;
 			files = (
 				293BBAF51EBEF4850094A537 /* MxmacOS in CopyFiles */,
-				293BBAF41EBEF4730094A537 /* MxmacOS.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		29922E4C1EB6F14300AD4CD3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
-			dstPath = "";
+			dstPath = MxmacOS.framework/Versions/A;
 			dstSubfolderSpec = 16;
 			files = (
 				29922EA81EB6F9CE00AD4CD3 /* MxmacOS in CopyFiles */,
