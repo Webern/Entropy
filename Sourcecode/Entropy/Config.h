@@ -3,6 +3,7 @@
 #pragma once
 
 #include "InstrumentInfo.h"
+#include "Score.h"
 
 #include <string>
 #include <vector>
@@ -22,6 +23,8 @@ namespace entropy
         const std::string& getOutputFilePath() const;
         const std::string& getWorkTitle() const;
         const std::vector<InstrumentGroupInfo>& getInstrumentGroups() const;
+
+        Score getScoreSetup() const;
 
         static constexpr const char* const DEFAULT_INPUT = "./Config.entropy";
         static constexpr const char* const DEFAULT_OUTPUT = "./Entropy.xml";

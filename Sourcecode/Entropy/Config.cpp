@@ -5,6 +5,7 @@
 #include "Entropy/Config.h"
 #include "EazyXml/EazyXml.h"
 #include "Entropy/Throw.h"
+#include "Entropy/Constants.h"
 
 namespace entropy
 {
@@ -59,6 +60,90 @@ namespace entropy
     const std::vector<InstrumentGroupInfo>& Config::getInstrumentGroups() const
     {
         return myInstrumentGroups;
+    }
+
+
+    Score Config::getScoreSetup() const
+    {
+        mx::api::ScoreData scoreData;
+        scoreData.workTitle = getWorkTitle();
+        scoreData.composer = "Matthew James Briggs";
+        scoreData.copyright = "© 2017 by Matthew James Briggs";
+        scoreData.ticksPerQuarter = entropy::TICKS_PER_QUARTER;
+
+        int instrumentIndex = 0;
+        const auto& grps = getInstrumentGroups();
+
+        mx::api::TimeSignatureData timeSig{};
+        timeSig.beats = 4;
+        timeSig.beatType = 4;
+        timeSig.isImplicit = false;
+        timeSig.display = mx::api::Bool::yes;
+
+        std::vector<std::string> part_ids;
+
+        for( const auto& grp : grps )
+        {
+            int start = instrumentIndex;
+
+            for( const auto& inst : grp.instruments )
+            {
+                mx::api::PartData part{};
+                part.uniqueId = std::string{ entropy::stringInstrumentTypeID( inst.instrumentTypeID ) } + std::string{ "_PART_INDEX_" } + std::to_string(instrumentIndex);
+                part_ids.push_back( part.uniqueId );
+                part.name = inst.name;
+                part.abbreviation = inst.abbreviation;
+                part.instrumentData.uniqueId = std::string{ "I_" } + part.uniqueId;
+                part.instrumentData.sound = inst.musicXmlSound;
+                part.instrumentData.name = inst.name;
+                mx::api::MeasureData measure;
+
+                for( const auto& clef : inst.startingClefs )
+                {
+                    mx::api::ClefData clefData{};
+
+                    if( clef == entropy::ClefName::TREBLE )
+                    {
+                        clefData.setTreble();
+                    }
+                    else if( clef == entropy::ClefName::TENOR )
+                    {
+                        clefData.setTenor();
+                    }
+                    else if( clef == entropy::ClefName::ALTO )
+                    {
+                        clefData.setAlto();
+                    }
+                    else if( clef == entropy::ClefName::BASS )
+                    {
+                        clefData.setBass();
+                    }
+                    else
+                    {
+                        ENTROPY_THROW( "unsupported clef" );
+                    }
+
+                    mx::api::StaffData staff{};
+                    staff.clefs.push_back( clefData );
+                    measure.staves.push_back( staff );
+                }
+                measure.timeSignature = timeSig;
+                part.measures.push_back( measure );
+                scoreData.parts.push_back( part );
+                ++instrumentIndex;
+            }
+            
+            int stop = instrumentIndex - 1;
+            mx::api::PartGroupData pg{};
+            pg.name = grp.name;
+            pg.bracketType = mx::api::BracketType::bracket;
+            pg.firstPartIndex = start;
+            pg.lastPartIndex = stop;
+            scoreData.partGroups.push_back( pg );
+        }
+        Score result;
+        result.setScoreData( std::move(scoreData) );
+        return result;
     }
 
 
