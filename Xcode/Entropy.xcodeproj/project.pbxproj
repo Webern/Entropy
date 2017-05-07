@@ -213,12 +213,12 @@
 				29ED5B401EBD65070003822B /* Pitch.h */,
 				297355611EBC33CB0005EB5B /* PitchClass.cpp */,
 				297355621EBC33CB0005EB5B /* PitchClass.h */,
-				29954E511EB854B6001F003D /* RandomDigits.h */,
-				29954E501EB84977001F003D /* Throw.h */,
-				2928461F1EBE371C00A3D66B /* Score.cpp */,
-				292846201EBE371C00A3D66B /* Score.h */,
 				293BBB001EBF83330094A537 /* Position.cpp */,
 				293BBB011EBF83330094A537 /* Position.h */,
+				29954E511EB854B6001F003D /* RandomDigits.h */,
+				2928461F1EBE371C00A3D66B /* Score.cpp */,
+				292846201EBE371C00A3D66B /* Score.h */,
+				29954E501EB84977001F003D /* Throw.h */,
 			);
 			name = Entropy;
 			path = ../Sourcecode/Entropy;

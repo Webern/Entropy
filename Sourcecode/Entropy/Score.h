@@ -14,7 +14,9 @@ namespace entropy
     {
     public:
         void setScoreData( mx::api::ScoreData inScoreData );
-        mx::api::ScoreData getScoreData() const;
+        const mx::api::ScoreData& getScoreData() const;
+        mx::api::ScoreData& getScoreData();
+        void appendmeasures( int inNumMeasures );
 
     private:
         mx::api::ScoreData myScore;

@@ -98,6 +98,8 @@
         <type>quarter</type>
       </note>
     </measure>
+    <measure number="2" />
+    <measure number="3" />
   </part>
   <part id="VIOLIN_PART_INDEX_1">
     <measure number="1">
@@ -149,6 +151,8 @@
         <type>quarter</type>
       </note>
     </measure>
+    <measure number="2" />
+    <measure number="3" />
   </part>
   <part id="VIOLA_PART_INDEX_2">
     <measure number="1">
@@ -200,6 +204,8 @@
         <type>quarter</type>
       </note>
     </measure>
+    <measure number="2" />
+    <measure number="3" />
   </part>
   <part id="CELLO_PART_INDEX_3">
     <measure number="1">
@@ -251,5 +257,7 @@
         <type>quarter</type>
       </note>
     </measure>
+    <measure number="2" />
+    <measure number="3" />
   </part>
 </score-partwise>

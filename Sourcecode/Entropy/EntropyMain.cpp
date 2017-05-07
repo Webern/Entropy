@@ -11,7 +11,7 @@ int main( int argc, const char* argv[] )
 {
     entropy::Config config{ argc, argv };
     auto score = config.getScoreSetup();
-    auto scoreData = score->getScoreData();
+    auto& scoreData = score->getScoreData();
 
     mx::api::NoteData note{};
     note.durationData.durationTimeTicks = entropy::TICKS_PER_QUARTER;
@@ -78,6 +78,9 @@ int main( int argc, const char* argv[] )
     note.tickTimePosition += entropy::TICKS_PER_QUARTER;
     note.pitchData.step = mx::api::Step::g;
     voiceP->notes.push_back( note );
+
+    // add some measures
+    score->appendmeasures( 2 );
 
     // save the document
     auto& docMgr = mx::api::DocumentManager::getInstance();
