@@ -90,7 +90,7 @@ int main( int argc, const char* argv[] )
 
     // other stuff
     const auto vec = entropy::getRandomDigits();
-    EN_UNUSED( vec );
+    ENTROPY_UNUSED( vec );
 
     return 0;
 }

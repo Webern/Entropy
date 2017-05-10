@@ -15,6 +15,13 @@ namespace entropy
     constexpr const int TICKS_PER_16TH = TICKS_PER_QUARTER / 4;
     constexpr const int TICKS_PER_32ND = TICKS_PER_QUARTER / 8;
     constexpr const int TICKS_PER_64TH = TICKS_PER_QUARTER / 16;
+    constexpr const int TIME_SIGNATURE_1 = TICKS_PER_WHOLE;
+    constexpr const int TIME_SIGNATURE_2 = TICKS_PER_HALF;
+    constexpr const int TIME_SIGNATURE_4 = TICKS_PER_QUARTER;
+    constexpr const int TIME_SIGNATURE_8 = TICKS_PER_8TH;
+    constexpr const int TIME_SIGNATURE_16 = TICKS_PER_16TH;
+    constexpr const int TIME_SIGNATURE_32 = TICKS_PER_32ND;
+    constexpr const int TIME_SIGNATURE_64 = TICKS_PER_64TH;
     constexpr const int MAX_TUPLET_ACTUAL = 9;
     constexpr const int MAX_TUPLET_NORMAL = 8;
     constexpr const int MAX_DOTS = 2;

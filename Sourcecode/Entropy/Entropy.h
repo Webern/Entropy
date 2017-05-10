@@ -4,7 +4,7 @@
 
 namespace entropy
 {
-    #define EN_UNUSED(x) (void)(x);
+    #define ENTROPY_UNUSED(x) (void)(x);
 }
 
 #include "Constants.h"

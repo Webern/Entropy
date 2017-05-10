@@ -17,6 +17,12 @@
 		293BBAF61EBEF5100094A537 /* MxmacOS in Frameworks */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		293BBB021EBF83330094A537 /* Position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 293BBB001EBF83330094A537 /* Position.cpp */; };
 		293BBB031EBF83330094A537 /* Position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 293BBB001EBF83330094A537 /* Position.cpp */; };
+		293D7C5B1EC2EE3A00D9990B /* DurationChain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 293D7C591EC2EE3A00D9990B /* DurationChain.cpp */; };
+		293D7C5C1EC2EE3A00D9990B /* DurationChain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 293D7C591EC2EE3A00D9990B /* DurationChain.cpp */; };
+		293D7C5F1EC2EEA800D9990B /* DurationGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 293D7C5D1EC2EEA800D9990B /* DurationGroup.cpp */; };
+		293D7C601EC2EEA800D9990B /* DurationGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 293D7C5D1EC2EEA800D9990B /* DurationGroup.cpp */; };
+		293D7C631EC2F34F00D9990B /* TimeSignature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 293D7C611EC2F34F00D9990B /* TimeSignature.cpp */; };
+		293D7C641EC2F34F00D9990B /* TimeSignature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 293D7C611EC2F34F00D9990B /* TimeSignature.cpp */; };
 		29685B071EBADBD000450727 /* InstrumentInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29685B051EBADBD000450727 /* InstrumentInfo.cpp */; };
 		29685B171EBB776B00450727 /* libEazyXml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29954E3F1EB83F13001F003D /* libEazyXml.a */; };
 		29685B4C1EBB7CE700450727 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29922E611EB6F63B00AD4CD3 /* Config.cpp */; };
@@ -72,6 +78,12 @@
 		292846231EBE37B600A3D66B /* ScoreTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScoreTest.cpp; sourceTree = "<group>"; };
 		293BBB001EBF83330094A537 /* Position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Position.cpp; sourceTree = "<group>"; };
 		293BBB011EBF83330094A537 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
+		293D7C591EC2EE3A00D9990B /* DurationChain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DurationChain.cpp; sourceTree = "<group>"; };
+		293D7C5A1EC2EE3A00D9990B /* DurationChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationChain.h; sourceTree = "<group>"; };
+		293D7C5D1EC2EEA800D9990B /* DurationGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DurationGroup.cpp; sourceTree = "<group>"; };
+		293D7C5E1EC2EEA800D9990B /* DurationGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationGroup.h; sourceTree = "<group>"; };
+		293D7C611EC2F34F00D9990B /* TimeSignature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeSignature.cpp; sourceTree = "<group>"; };
+		293D7C621EC2F34F00D9990B /* TimeSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeSignature.h; sourceTree = "<group>"; };
 		29685B051EBADBD000450727 /* InstrumentInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InstrumentInfo.cpp; sourceTree = "<group>"; };
 		29685B061EBADBD000450727 /* InstrumentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentInfo.h; sourceTree = "<group>"; };
 		29685B081EBAE26700450727 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
@@ -204,6 +216,10 @@
 				29ED5B431EBD653B0003822B /* Constants.h */,
 				292846191EBE1E6D00A3D66B /* Duration.cpp */,
 				2928461A1EBE1E6D00A3D66B /* Duration.h */,
+				293D7C591EC2EE3A00D9990B /* DurationChain.cpp */,
+				293D7C5A1EC2EE3A00D9990B /* DurationChain.h */,
+				293D7C5D1EC2EEA800D9990B /* DurationGroup.cpp */,
+				293D7C5E1EC2EEA800D9990B /* DurationGroup.h */,
 				29922E5E1EB6F3EE00AD4CD3 /* Entropy.h */,
 				29685B091EBAE7B000450727 /* EnumMacros.h */,
 				29685B081EBAE26700450727 /* Enums.h */,
@@ -219,6 +235,8 @@
 				2928461F1EBE371C00A3D66B /* Score.cpp */,
 				292846201EBE371C00A3D66B /* Score.h */,
 				29954E501EB84977001F003D /* Throw.h */,
+				293D7C611EC2F34F00D9990B /* TimeSignature.cpp */,
+				293D7C621EC2F34F00D9990B /* TimeSignature.h */,
 			);
 			name = Entropy;
 			path = ../Sourcecode/Entropy;
@@ -319,9 +337,11 @@
 				29685B541EBB7CFD00450727 /* PitchClassTest.cpp in Sources */,
 				29685B4E1EBB7CF500450727 /* cpulFailure.cpp in Sources */,
 				29ED5B451EBD68770003822B /* PitchTest.cpp in Sources */,
+				293D7C5C1EC2EE3A00D9990B /* DurationChain.cpp in Sources */,
 				292846221EBE371C00A3D66B /* Score.cpp in Sources */,
 				29685B4F1EBB7CF500450727 /* cpulRun.cpp in Sources */,
 				293BBB031EBF83330094A537 /* Position.cpp in Sources */,
+				293D7C641EC2F34F00D9990B /* TimeSignature.cpp in Sources */,
 				29685B501EBB7CF500450727 /* cpulTest.cpp in Sources */,
 				2928461C1EBE1E6D00A3D66B /* Duration.cpp in Sources */,
 				29685B511EBB7CF500450727 /* cpulTestRegistry.cpp in Sources */,
@@ -332,6 +352,7 @@
 				297355641EBC33CB0005EB5B /* PitchClass.cpp in Sources */,
 				29685B4C1EBB7CE700450727 /* Config.cpp in Sources */,
 				29ED5B421EBD65070003822B /* Pitch.cpp in Sources */,
+				293D7C601EC2EEA800D9990B /* DurationGroup.cpp in Sources */,
 				29685B4D1EBB7CE700450727 /* InstrumentInfo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,11 +364,14 @@
 				29922E601EB6F3EE00AD4CD3 /* EntropyMain.cpp in Sources */,
 				2928461B1EBE1E6D00A3D66B /* Duration.cpp in Sources */,
 				293BBB021EBF83330094A537 /* Position.cpp in Sources */,
+				293D7C5B1EC2EE3A00D9990B /* DurationChain.cpp in Sources */,
 				29ED5B411EBD65070003822B /* Pitch.cpp in Sources */,
 				297355631EBC33CB0005EB5B /* PitchClass.cpp in Sources */,
 				29922E631EB6F63B00AD4CD3 /* Config.cpp in Sources */,
+				293D7C5F1EC2EEA800D9990B /* DurationGroup.cpp in Sources */,
 				29685B071EBADBD000450727 /* InstrumentInfo.cpp in Sources */,
 				292846211EBE371C00A3D66B /* Score.cpp in Sources */,
+				293D7C631EC2F34F00D9990B /* TimeSignature.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
