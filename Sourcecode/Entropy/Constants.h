@@ -25,4 +25,5 @@ namespace entropy
     constexpr const int MAX_TUPLET_ACTUAL = 9;
     constexpr const int MAX_TUPLET_NORMAL = 8;
     constexpr const int MAX_DOTS = 2;
+    constexpr const int MAX_TIME_SIGNATURE_TOP = 99;
 }
