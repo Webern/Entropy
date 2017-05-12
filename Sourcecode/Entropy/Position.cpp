@@ -122,6 +122,6 @@ namespace entropy
         const auto& measure = part.measures.at( static_cast<size_t>( getMeasureIndex() ) );
         const auto& staff = measure.staves.at( static_cast<size_t>( getStaffIndex() ) );
         const auto iter = staff.voices.find( inIndex );
-        ENTROPY_ASSERT( iter != std::cend( staff.voices ) );
+        ENTROPY_ASSERT( iter != std::end( staff.voices ) );
     }
 }

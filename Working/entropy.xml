@@ -99,7 +99,14 @@
       </note>
     </measure>
     <measure number="2" />
-    <measure number="3" />
+    <measure number="3">
+      <attributes>
+        <time print-object="yes">
+          <beats>5</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
   </part>
   <part id="VIOLIN_PART_INDEX_1">
     <measure number="1">
@@ -152,7 +159,14 @@
       </note>
     </measure>
     <measure number="2" />
-    <measure number="3" />
+    <measure number="3">
+      <attributes>
+        <time print-object="yes">
+          <beats>5</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
   </part>
   <part id="VIOLA_PART_INDEX_2">
     <measure number="1">
@@ -205,7 +219,14 @@
       </note>
     </measure>
     <measure number="2" />
-    <measure number="3" />
+    <measure number="3">
+      <attributes>
+        <time print-object="yes">
+          <beats>5</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
   </part>
   <part id="CELLO_PART_INDEX_3">
     <measure number="1">
@@ -258,6 +279,13 @@
       </note>
     </measure>
     <measure number="2" />
-    <measure number="3" />
+    <measure number="3">
+      <attributes>
+        <time print-object="yes">
+          <beats>5</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
   </part>
 </score-partwise>

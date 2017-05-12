@@ -41,6 +41,7 @@
 		29922EA81EB6F9CE00AD4CD3 /* MxmacOS in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		29922EA91EB6F9D200AD4CD3 /* MxmacOS in Frameworks */ = {isa = PBXBuildFile; fileRef = 29922EA71EB6F9CB00AD4CD3 /* MxmacOS */; };
 		29954E401EB83F13001F003D /* libEazyXml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29954E3F1EB83F13001F003D /* libEazyXml.a */; };
+		29D602921EC577E300382124 /* TimeSignatureTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29D602911EC577E300382124 /* TimeSignatureTest.cpp */; };
 		29ED5B411EBD65070003822B /* Pitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29ED5B3F1EBD65070003822B /* Pitch.cpp */; };
 		29ED5B421EBD65070003822B /* Pitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29ED5B3F1EBD65070003822B /* Pitch.cpp */; };
 		29ED5B451EBD68770003822B /* PitchTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29ED5B441EBD68770003822B /* PitchTest.cpp */; };
@@ -117,6 +118,7 @@
 		29954E3F1EB83F13001F003D /* libEazyXml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEazyXml.a; path = Ezx/build/Debug/libEazyXml.a; sourceTree = "<group>"; };
 		29954E501EB84977001F003D /* Throw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Throw.h; sourceTree = "<group>"; };
 		29954E511EB854B6001F003D /* RandomDigits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomDigits.h; sourceTree = "<group>"; };
+		29D602911EC577E300382124 /* TimeSignatureTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeSignatureTest.cpp; sourceTree = "<group>"; };
 		29ED5B3F1EBD65070003822B /* Pitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pitch.cpp; sourceTree = "<group>"; };
 		29ED5B401EBD65070003822B /* Pitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pitch.h; sourceTree = "<group>"; };
 		29ED5B431EBD653B0003822B /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				29ED5B441EBD68770003822B /* PitchTest.cpp */,
 				2928461D1EBE297000A3D66B /* DurationTest.cpp */,
 				292846231EBE37B600A3D66B /* ScoreTest.cpp */,
+				29D602911EC577E300382124 /* TimeSignatureTest.cpp */,
 			);
 			name = Test;
 			path = ../Sourcecode/EntropyTest;
@@ -336,6 +339,7 @@
 			files = (
 				29685B541EBB7CFD00450727 /* PitchClassTest.cpp in Sources */,
 				29685B4E1EBB7CF500450727 /* cpulFailure.cpp in Sources */,
+				29D602921EC577E300382124 /* TimeSignatureTest.cpp in Sources */,
 				29ED5B451EBD68770003822B /* PitchTest.cpp in Sources */,
 				293D7C5C1EC2EE3A00D9990B /* DurationChain.cpp in Sources */,
 				292846221EBE371C00A3D66B /* Score.cpp in Sources */,

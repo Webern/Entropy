@@ -58,4 +58,113 @@ namespace entropy
             }
         }
     }
+
+
+    void Score::addTimeSignature( int inMeasureIndex, TimeSignature inTimeSignature )
+    {
+        myTimeSignatureMap[inMeasureIndex] = inTimeSignature;
+        updateMeasureTimeSignatures();
+    }
+
+
+    bool Score::removeTimeSignature( int inMeasureIndex )
+    {
+        const auto iter = myTimeSignatureMap.find( inMeasureIndex );
+        const bool isFound = iter != std::end( myTimeSignatureMap );
+        myTimeSignatureMap.erase( iter );
+
+        if (isFound)
+        {
+            updateMeasureTimeSignatures();
+        }
+
+        return isFound;
+    }
+
+
+    void Score::clearTimeSignatures()
+    {
+        myTimeSignatureMap.clear();
+        updateMeasureTimeSignatures();
+    }
+
+
+    const std::map<int, TimeSignature>& Score::getTimeSignatureMap() const
+    {
+        return myTimeSignatureMap;
+    }
+
+
+    void Score::updateMeasureTimeSignatures()
+    {
+        if ( myTimeSignatureMap.empty() )
+        {
+            for( auto& part : myScore.parts )
+            {
+                bool isFirst = true;
+                for( auto& measure : part.measures )
+                {
+                    measure.timeSignature = mx::api::TimeSignatureData{};
+
+                    if( isFirst )
+                    {
+                        measure.timeSignature.isImplicit = false;
+                        measure.timeSignature.display = mx::api::Bool::yes;
+                        isFirst = false;
+                    }
+                }
+            }
+
+            return;
+        }
+
+        const int lastTimeSignatureMeasureIndex = myTimeSignatureMap.crbegin()->first;
+        const int measuresToAppend = 1 + lastTimeSignatureMeasureIndex - myScore.getNumMeasures();
+
+        if( measuresToAppend > 0 )
+        {
+            appendmeasures( measuresToAppend );
+        }
+
+        for( auto& part : myScore.parts )
+        {
+            TimeSignature current{};
+            TimeSignature previous{};
+            int measureIndex = 0;
+
+            for( auto& measure : part.measures )
+            {
+                bool show = false;
+                const auto iter = myTimeSignatureMap.find( measureIndex );
+                const bool isFound = iter != std::end( myTimeSignatureMap );
+                const bool isFirstMeasure = measureIndex == 0;
+
+                if( isFound )
+                {
+                    const auto oldTemp = current;
+                    current = iter->second;
+                    const bool topSame = previous.getTopNumber() == current.getTopNumber();
+                    const bool bottomSame = previous.getBottomNumber() == current.getBottomNumber();
+                    show = ( !topSame ) || ( !bottomSame ) || ( isFirstMeasure );
+                    previous = oldTemp;
+                }
+                else if ( isFirstMeasure )
+                {
+                    show = true;
+                }
+                else
+                {
+                    show = false;
+                }
+
+                measure.timeSignature.beats = current.getTopNumber();
+                measure.timeSignature.beatType = current.getBottomNumber();
+                measure.timeSignature.symbol = mx::api::TimeSignatureSymbol::unspecified;
+                measure.timeSignature.display = show ? mx::api::Bool::yes : mx::api::Bool::unspecified;
+                measure.timeSignature.isImplicit = !show;
+                ++measureIndex;
+            }
+        }
+
+    }
 }

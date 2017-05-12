@@ -10,13 +10,28 @@
 namespace entropy
 {
     TimeSignature::TimeSignature()
-    : myTopNumber{ 0 }
-    , myBottomNumber{ 0 }
+    : myTopNumber{ 4 }
+    , myBottomNumber{ 4 }
     , myDurationChain{}
     {
-        setTopNumber( 4 );
-        setBottomNumber( 4 );
         setSimpleGrouping( { 1, 1, 1, 1 } );
+    }
+
+
+    TimeSignature::TimeSignature(int inTopNumber, int inBottomNumber)
+    : TimeSignature{}
+    {
+        setTopNumber( inTopNumber );
+        setBottomNumber( inBottomNumber );
+    }
+
+
+    int
+    TimeSignature::getTicks() const
+    {
+        const auto ticksPerUnit = convertBottomNumberToTicks( getBottomNumber() );
+        const auto result = getTopNumber() * ticksPerUnit;
+        return result;
     }
 
 
@@ -52,6 +67,7 @@ namespace entropy
         }
 
         validateBottomNumber( inBottomNumber );
+        myBottomNumber = inBottomNumber;
         resetGrouping();
     }
 
@@ -66,7 +82,7 @@ namespace entropy
 
     void TimeSignature::setSimpleGrouping( std::vector<int> inGrouping )
     {
-        const auto total = std::accumulate( std::cbegin(inGrouping), std::cend(inGrouping), 0 );
+        const auto total = std::accumulate( std::begin(inGrouping), std::end(inGrouping), 0 );
         ENTROPY_ASSERT( total == getTopNumber() );
         const auto bottomDir = getBottomDuration();
         myDurationChain = DurationChain{};
@@ -83,10 +99,47 @@ namespace entropy
     }
 
 
+    void TimeSignature::setComplexGrouping( DurationChain inDurationChain )
+    {
+        const int myTicks = getTicks();
+        const int incomingTicks = inDurationChain.getTicks();
+        ENTROPY_ASSERT( incomingTicks == myTicks );
+        myDurationChain = inDurationChain;
+    }
+
+
     void TimeSignature::resetGrouping()
     {
         std::vector<int> grouping( static_cast<size_t>( getTopNumber() ), 1 );
         setSimpleGrouping( grouping );
+    }
+
+
+    std::vector<int> TimeSignature::getBeatLengths() const
+    {
+        std::vector<int> lengths;
+
+        for( const auto& grp : myDurationChain.getDurationGroups() )
+        {
+            lengths.push_back( grp.getTicks() );
+        }
+
+        return lengths;
+    }
+
+
+    std::vector<int> TimeSignature::getBeatLocations() const
+    {
+        int position = 0;
+        std::vector<int> lengths;
+
+        for( const auto& grp : myDurationChain.getDurationGroups() )
+        {
+            lengths.push_back( position );
+            position += grp.getTicks();
+        }
+
+        return lengths;
     }
 
 
