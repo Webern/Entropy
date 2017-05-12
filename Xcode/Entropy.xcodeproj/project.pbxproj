@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2923AAF71EC6088B003989C6 /* Note.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2923AAF51EC6088B003989C6 /* Note.cpp */; };
+		2923AAF81EC6088B003989C6 /* Note.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2923AAF51EC6088B003989C6 /* Note.cpp */; };
 		2928461B1EBE1E6D00A3D66B /* Duration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 292846191EBE1E6D00A3D66B /* Duration.cpp */; };
 		2928461C1EBE1E6D00A3D66B /* Duration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 292846191EBE1E6D00A3D66B /* Duration.cpp */; };
 		2928461E1EBE297000A3D66B /* DurationTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2928461D1EBE297000A3D66B /* DurationTest.cpp */; };
@@ -71,6 +73,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2923AAF51EC6088B003989C6 /* Note.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Note.cpp; sourceTree = "<group>"; };
+		2923AAF61EC6088B003989C6 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		292846191EBE1E6D00A3D66B /* Duration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Duration.cpp; sourceTree = "<group>"; };
 		2928461A1EBE1E6D00A3D66B /* Duration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Duration.h; sourceTree = "<group>"; };
 		2928461D1EBE297000A3D66B /* DurationTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DurationTest.cpp; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 				29954E501EB84977001F003D /* Throw.h */,
 				293D7C611EC2F34F00D9990B /* TimeSignature.cpp */,
 				293D7C621EC2F34F00D9990B /* TimeSignature.h */,
+				2923AAF51EC6088B003989C6 /* Note.cpp */,
+				2923AAF61EC6088B003989C6 /* Note.h */,
 			);
 			name = Entropy;
 			path = ../Sourcecode/Entropy;
@@ -338,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29685B541EBB7CFD00450727 /* PitchClassTest.cpp in Sources */,
+				2923AAF81EC6088B003989C6 /* Note.cpp in Sources */,
 				29685B4E1EBB7CF500450727 /* cpulFailure.cpp in Sources */,
 				29D602921EC577E300382124 /* TimeSignatureTest.cpp in Sources */,
 				29ED5B451EBD68770003822B /* PitchTest.cpp in Sources */,
@@ -368,6 +375,7 @@
 				29922E601EB6F3EE00AD4CD3 /* EntropyMain.cpp in Sources */,
 				2928461B1EBE1E6D00A3D66B /* Duration.cpp in Sources */,
 				293BBB021EBF83330094A537 /* Position.cpp in Sources */,
+				2923AAF71EC6088B003989C6 /* Note.cpp in Sources */,
 				293D7C5B1EC2EE3A00D9990B /* DurationChain.cpp in Sources */,
 				29ED5B411EBD65070003822B /* Pitch.cpp in Sources */,
 				297355631EBC33CB0005EB5B /* PitchClass.cpp in Sources */,
