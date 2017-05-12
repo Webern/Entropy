@@ -80,7 +80,11 @@ int main( int argc, const char* argv[] )
     voiceP->notes.push_back( note );
 
     // add some measures
+    score->addTimeSignature( 1, entropy::TimeSignature{ 7, 4 } );
     score->addTimeSignature( 2, entropy::TimeSignature{ 5, 8 } );
+    score->addTimeSignature( 3, entropy::TimeSignature{ 6, 8 } );
+    score->addTimeSignature( 4, entropy::TimeSignature{ 3, 8 } );
+    score->addTimeSignature( 5, entropy::TimeSignature{ 5, 4 } );
 
     // save the document
     auto& docMgr = mx::api::DocumentManager::getInstance();

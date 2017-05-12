@@ -98,12 +98,43 @@
         <type>quarter</type>
       </note>
     </measure>
-    <measure number="2" />
+    <measure number="2">
+      <attributes>
+        <time print-object="yes">
+          <beats>7</beats>
+          <beat-type>4</beat-type>
+        </time>
+      </attributes>
+    </measure>
     <measure number="3">
       <attributes>
         <time print-object="yes">
           <beats>5</beats>
           <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="4">
+      <attributes>
+        <time print-object="yes">
+          <beats>6</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="5">
+      <attributes>
+        <time print-object="yes">
+          <beats>3</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="6">
+      <attributes>
+        <time print-object="yes">
+          <beats>5</beats>
+          <beat-type>4</beat-type>
         </time>
       </attributes>
     </measure>
@@ -158,12 +189,43 @@
         <type>quarter</type>
       </note>
     </measure>
-    <measure number="2" />
+    <measure number="2">
+      <attributes>
+        <time print-object="yes">
+          <beats>7</beats>
+          <beat-type>4</beat-type>
+        </time>
+      </attributes>
+    </measure>
     <measure number="3">
       <attributes>
         <time print-object="yes">
           <beats>5</beats>
           <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="4">
+      <attributes>
+        <time print-object="yes">
+          <beats>6</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="5">
+      <attributes>
+        <time print-object="yes">
+          <beats>3</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="6">
+      <attributes>
+        <time print-object="yes">
+          <beats>5</beats>
+          <beat-type>4</beat-type>
         </time>
       </attributes>
     </measure>
@@ -218,12 +280,43 @@
         <type>quarter</type>
       </note>
     </measure>
-    <measure number="2" />
+    <measure number="2">
+      <attributes>
+        <time print-object="yes">
+          <beats>7</beats>
+          <beat-type>4</beat-type>
+        </time>
+      </attributes>
+    </measure>
     <measure number="3">
       <attributes>
         <time print-object="yes">
           <beats>5</beats>
           <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="4">
+      <attributes>
+        <time print-object="yes">
+          <beats>6</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="5">
+      <attributes>
+        <time print-object="yes">
+          <beats>3</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="6">
+      <attributes>
+        <time print-object="yes">
+          <beats>5</beats>
+          <beat-type>4</beat-type>
         </time>
       </attributes>
     </measure>
@@ -278,12 +371,43 @@
         <type>quarter</type>
       </note>
     </measure>
-    <measure number="2" />
+    <measure number="2">
+      <attributes>
+        <time print-object="yes">
+          <beats>7</beats>
+          <beat-type>4</beat-type>
+        </time>
+      </attributes>
+    </measure>
     <measure number="3">
       <attributes>
         <time print-object="yes">
           <beats>5</beats>
           <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="4">
+      <attributes>
+        <time print-object="yes">
+          <beats>6</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="5">
+      <attributes>
+        <time print-object="yes">
+          <beats>3</beats>
+          <beat-type>8</beat-type>
+        </time>
+      </attributes>
+    </measure>
+    <measure number="6">
+      <attributes>
+        <time print-object="yes">
+          <beats>5</beats>
+          <beat-type>4</beat-type>
         </time>
       </attributes>
     </measure>
