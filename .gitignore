@@ -49,3 +49,6 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+
+## Ignore Doxygen Output
+Doxygen/html/*
