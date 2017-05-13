@@ -12,9 +12,9 @@ namespace entropy
 	Note::Note( ScorePtr inScore )
     : myPosition{ inScore }
     , myIsPositioned{ false }
-    , myUnpositionedTicks{ 0 }
     , myPitch{}
     , myDuration{}
+    , myIsRest{ false }
     , myIsTiedToNext{ false }
     , myIsTiedFromPrevious{ false }
     , myDynamic{ DYNAMIC_MF }
@@ -79,6 +79,20 @@ namespace entropy
     Note::setDuration( Duration inDuration )
     {
     	myDuration = inDuration;
+    }
+
+
+    bool
+    Note::getIsRest() const
+    {
+        return myIsRest;
+    }
+
+
+    void
+    Note::setIsRest( bool inValue )
+    {
+        myIsRest = inValue;
     }
 
     

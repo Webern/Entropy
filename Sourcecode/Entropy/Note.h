@@ -51,6 +51,8 @@ namespace entropy
         void setPitch( Pitch inPitch );
         Duration getDuration() const;
         void setDuration( Duration inDuration );
+        bool getIsRest() const;
+        void setIsRest( bool inValue );
         bool getIsTiedToNext() const;
         void setIsTiedToNext( bool inValue );
         bool getIsTiedFromPrevious() const;
@@ -76,9 +78,9 @@ namespace entropy
     private:
         Position myPosition;
         bool myIsPositioned;
-        int myUnpositionedTicks;
         Pitch myPitch;
         Duration myDuration;
+        bool myIsRest;
         bool myIsTiedToNext;
         bool myIsTiedFromPrevious;
         int myDynamic;
