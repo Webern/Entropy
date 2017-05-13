@@ -13,9 +13,10 @@
 
 namespace entropy
 {
-    /// @brief TODO
+    /// @brief A class to represent musical notes.
     ///
-    /// @detailed TODO
+    /// @detailed Note has Pitch, Duration and Position relative to the Score.
+    /// The position of a note is complicated, see the description below.
     ///
     class Note
     {
@@ -25,13 +26,27 @@ namespace entropy
     public:
         ScorePtr getScore() const;
 
-        ///@{ Testing 123
+        //@{
+        //!
+        //! A Note can either be positioned to a Part, Measure and Time withing the Score, or
+        //! it can be positioned in a pure tick space. So if you want to hold a string of notes
+        //! that represent a melodic fragment, you could setIsPositioned( false ) and the notes
+        //! would no longer carry any information about Measure, Voice, etc. In this mode a
+        //! note's 'position' is meaningless and is simpy relative to the note that comes before
+        //! and after it. But when you setIsPositioned( true ) then the getPosition() and
+        //! setPosition() functions become meaningful as the specify the note's precise location
+        //! within the score. Another way to conceptualize this is that a note is not in a score
+        //! when isPositioned is false and a note is in a score when isPositioned is true. When
+        //! you setIsPositioned( true ) the setPosition( p ) will cease to function and
+        //! getPosition() will always return 0, 0, 0...
+        //!
         bool getIsPositioned() const;
         void setIsPositioned(bool inValue);
         Position getPosition() const;
         void setPosition( Position inPosition );
-        ///@}
+        //@}
 
+        //@{
         Pitch getPitch() const;
         void setPitch( Pitch inPitch );
         Duration getDuration() const;
@@ -56,6 +71,7 @@ namespace entropy
         void setIsDownbow( bool inValue );
         bool getIsUpbow() const;
         void setIsUpbow( bool inValue );
+        //@}
 
     private:
         Position myPosition;
