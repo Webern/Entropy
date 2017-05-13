@@ -28,7 +28,7 @@ namespace entropy
     {
     public:
         std::string name;
-        std::string backetType;
+        std::string bracketType;
         std::vector<InstrumentInfo> instruments;
     };
 }

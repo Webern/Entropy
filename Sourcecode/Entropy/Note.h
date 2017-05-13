@@ -24,8 +24,14 @@ namespace entropy
 
     public:
         ScorePtr getScore() const;
+
+        ///@{ Testing 123
+        bool getIsPositioned() const;
+        void setIsPositioned(bool inValue);
         Position getPosition() const;
         void setPosition( Position inPosition );
+        ///@}
+
         Pitch getPitch() const;
         void setPitch( Pitch inPitch );
         Duration getDuration() const;
@@ -53,6 +59,8 @@ namespace entropy
 
     private:
         Position myPosition;
+        bool myIsPositioned;
+        int myUnpositionedTicks;
         Pitch myPitch;
         Duration myDuration;
         bool myIsTiedToNext;

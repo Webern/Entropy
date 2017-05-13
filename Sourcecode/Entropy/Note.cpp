@@ -11,6 +11,8 @@ namespace entropy
 
 	Note::Note( ScorePtr inScore )
     : myPosition{ inScore }
+    , myIsPositioned{ false }
+    , myUnpositionedTicks{ 0 }
     , myPitch{}
     , myDuration{}
     , myIsTiedToNext{ false }

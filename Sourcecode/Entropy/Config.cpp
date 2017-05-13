@@ -313,7 +313,7 @@ namespace entropy
         ENTROPY_ASSERT( it != e );
         ENTROPY_ASSERT( it->getName() == "group-type" );
         ENTROPY_ASSERT( it->getType() == ezx::XElementType::text );
-        grp.backetType = it->getValue();
+        grp.bracketType = it->getValue();
         ++it;
 
         ENTROPY_ASSERT( it != e );

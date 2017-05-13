@@ -122,6 +122,7 @@
 		29954E3F1EB83F13001F003D /* libEazyXml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEazyXml.a; path = Ezx/build/Debug/libEazyXml.a; sourceTree = "<group>"; };
 		29954E501EB84977001F003D /* Throw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Throw.h; sourceTree = "<group>"; };
 		29954E511EB854B6001F003D /* RandomDigits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomDigits.h; sourceTree = "<group>"; };
+		29C20B461EC7812A00FBF741 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29D602911EC577E300382124 /* TimeSignatureTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeSignatureTest.cpp; sourceTree = "<group>"; };
 		29ED5B3F1EBD65070003822B /* Pitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pitch.cpp; sourceTree = "<group>"; };
 		29ED5B401EBD65070003822B /* Pitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pitch.h; sourceTree = "<group>"; };
@@ -198,6 +199,7 @@
 		29922E451EB6F14300AD4CD3 = {
 			isa = PBXGroup;
 			children = (
+				29C20B461EC7812A00FBF741 /* Info.plist */,
 				29922E501EB6F14300AD4CD3 /* Entropy */,
 				29685B401EBB7A6900450727 /* EntropyMain */,
 				29922E641EB6F8B800AD4CD3 /* Frameworks */,
@@ -232,6 +234,8 @@
 				29685B081EBAE26700450727 /* Enums.h */,
 				29685B051EBADBD000450727 /* InstrumentInfo.cpp */,
 				29685B061EBADBD000450727 /* InstrumentInfo.h */,
+				2923AAF51EC6088B003989C6 /* Note.cpp */,
+				2923AAF61EC6088B003989C6 /* Note.h */,
 				29ED5B3F1EBD65070003822B /* Pitch.cpp */,
 				29ED5B401EBD65070003822B /* Pitch.h */,
 				297355611EBC33CB0005EB5B /* PitchClass.cpp */,
@@ -244,8 +248,6 @@
 				29954E501EB84977001F003D /* Throw.h */,
 				293D7C611EC2F34F00D9990B /* TimeSignature.cpp */,
 				293D7C621EC2F34F00D9990B /* TimeSignature.h */,
-				2923AAF51EC6088B003989C6 /* Note.cpp */,
-				2923AAF61EC6088B003989C6 /* Note.h */,
 			);
 			name = Entropy;
 			path = ../Sourcecode/Entropy;
@@ -542,6 +544,8 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = BEL6W3V5K4;
 				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewjamesbriggs.entropy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -551,6 +555,8 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = BEL6W3V5K4;
 				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewjamesbriggs.entropy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
