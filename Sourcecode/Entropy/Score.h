@@ -24,6 +24,9 @@ namespace entropy
         void clearTimeSignatures();
         const std::map<int, TimeSignature>& getTimeSignatureMap() const;
 
+        /// returns the time signature for each measure
+        std::vector<TimeSignature> getTimeSignatureChain() const;
+
     private:
         mx::api::ScoreData myScore;
         std::map<int, TimeSignature> myTimeSignatureMap;

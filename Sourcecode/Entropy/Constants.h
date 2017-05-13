@@ -26,4 +26,12 @@ namespace entropy
     constexpr const int MAX_TUPLET_NORMAL = 8;
     constexpr const int MAX_DOTS = 2;
     constexpr const int MAX_TIME_SIGNATURE_TOP = 99;
+    constexpr const int DYNAMIC_PPP = 1;
+    constexpr const int DYNAMIC_PP = 2;
+    constexpr const int DYNAMIC_P = 3;
+    constexpr const int DYNAMIC_MP = 4;
+    constexpr const int DYNAMIC_MF = 5;
+    constexpr const int DYNAMIC_F = 6;
+    constexpr const int DYNAMIC_FF = 7;
+    constexpr const int DYNAMIC_FFF = 8;
 }

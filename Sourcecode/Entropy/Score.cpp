@@ -95,6 +95,32 @@ namespace entropy
     }
 
 
+    std::vector<TimeSignature>
+    Score::getTimeSignatureChain() const
+    {
+        std::vector<TimeSignature> sigs;
+        ENTROPY_ASSERT( !myScore.parts.empty() );
+        const int measureCount = static_cast<int>( myScore.parts.front().measures.size() );
+
+        TimeSignature currentTimeSignature;
+
+        for( int m = 0; m < measureCount; ++m )
+        {
+            const auto iter = myTimeSignatureMap.find( m );
+            const bool isFound = iter != std::end( myTimeSignatureMap );
+
+            if( isFound )
+            {
+                currentTimeSignature = iter->second;
+            }
+
+            sigs.push_back( currentTimeSignature );
+        }
+
+        return sigs;
+    }
+
+
     void Score::updateMeasureTimeSignatures()
     {
         if ( myTimeSignatureMap.empty() )

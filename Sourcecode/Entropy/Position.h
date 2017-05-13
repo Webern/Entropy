@@ -10,6 +10,7 @@ namespace entropy
     {
     public:
         Position( ScorePtr inScore );
+        ScorePtr getScore() const;
         int getPartIndex() const;
         void setPartIndex( int inIndex );
         const std::string& getPartName() const;
@@ -20,6 +21,10 @@ namespace entropy
         void setStaffIndex( int inIndex);
         int getVoiceIndex() const;
         void setVoiceIndex( int inIndex );
+        int getTick() const;
+        void setTick( int inTick );
+        int getAbsoluteTick() const;
+        void setAbsoluteTick( int inAbsoluteTick );
 
     private:
         ScorePtr myScore;
@@ -27,6 +32,7 @@ namespace entropy
         int myMeasureIndex;
         int myStaffIndex;
         int myVoiceIndex;
+        int myTick;
 
     private:
         void validatePartIndex( int inIndex ) const;

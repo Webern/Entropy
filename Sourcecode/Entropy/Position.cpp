@@ -10,9 +10,17 @@ namespace entropy
     , myMeasureIndex{ 0 }
     , myStaffIndex{ 0 }
     , myVoiceIndex{ 0 }
+    , myTick{ 0 }
     {
         ENTROPY_ASSERT( myScore );
     }
+
+
+    ScorePtr Position::getScore() const
+    {
+        return myScore;
+    }
+    
 
     int Position::getPartIndex() const
     {
@@ -83,6 +91,40 @@ namespace entropy
     {
         validateVoiceIndex( inIndex );
         myVoiceIndex = inIndex;
+    }
+
+
+    int Position::getTick() const
+    {
+        return myTick;
+    }
+
+
+    void Position::setTick( int inTick )
+    {
+        ENTROPY_ASSERT( inTick >= 0 );
+        // TODO validate that the tick position is not beyond
+        // the range of the measure
+        myTick = inTick;
+    }
+
+
+    int Position::getAbsoluteTick() const
+    {
+        int tickTotal = 0;
+        const auto sigs = getScore()->getTimeSignatureChain();
+        auto iter = sigs.cbegin();
+        const auto end = sigs.cend();
+        ENTROPY_ASSERT( iter != end );
+
+        for( int m = 0; m < myMeasureIndex; ++m )
+        {
+            ENTROPY_ASSERT( m < static_cast<int>( sigs.size() ) );
+            tickTotal += sigs.at( static_cast<size_t>( m ) ).getTicks();
+        }
+
+        tickTotal += myTick;
+        return tickTotal;
     }
 
     //////////////////////////////////////////////////////////////////////////////
