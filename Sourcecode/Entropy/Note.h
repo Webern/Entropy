@@ -28,8 +28,8 @@ namespace entropy
 
         //@{
         //!
-        //! A Note can either be positioned to a Part, Measure and Time withing the Score, or
-        //! it can be positioned in a pure tick space. So if you want to hold a string of notes
+        //! A Note can either be positioned to a Part, Measure and Time within the Score, or
+        //! it can be positioned in a pure tick space. So if you want to hold a series of notes
         //! that represent a melodic fragment, you could setIsPositioned( false ) and the notes
         //! would no longer carry any information about Measure, Voice, etc. In this mode a
         //! note's 'position' is meaningless and is simpy relative to the note that comes before
@@ -41,7 +41,7 @@ namespace entropy
         //! getPosition() will always return 0, 0, 0...
         //!
         bool getIsPositioned() const;
-        void setIsPositioned(bool inValue);
+        void setIsPositioned( bool inValue );
         Position getPosition() const;
         void setPosition( Position inPosition );
         //@}
@@ -53,6 +53,8 @@ namespace entropy
         void setDuration( Duration inDuration );
         bool getIsRest() const;
         void setIsRest( bool inValue );
+        bool getIsAccidentalVisible() const;
+        void setIsAccidentalVisible( bool inValue );
         bool getIsTiedToNext() const;
         void setIsTiedToNext( bool inValue );
         bool getIsTiedFromPrevious() const;
@@ -75,12 +77,16 @@ namespace entropy
         void setIsUpbow( bool inValue );
         //@}
 
+        mx::api::NoteData createWithoutInsert() const;
+        void createAndInsert() const;
+
     private:
         Position myPosition;
         bool myIsPositioned;
         Pitch myPitch;
         Duration myDuration;
         bool myIsRest;
+        bool myIsAccidentalVisible;
         bool myIsTiedToNext;
         bool myIsTiedFromPrevious;
         int myDynamic;

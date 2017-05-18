@@ -104,7 +104,7 @@ namespace entropy
     {
         ENTROPY_ASSERT( inTick >= 0 );
         // TODO validate that the tick position is not beyond
-        // the range of the measure
+        // the range of the measure?
         myTick = inTick;
     }
 

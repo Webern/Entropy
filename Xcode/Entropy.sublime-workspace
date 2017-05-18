@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"myD",
+				"myDynamic"
+			],
+			[
+				"myIsT",
+				"myIsTiedFromPrevious"
+			],
+			[
+				"myIsTi",
+				"myIsTiedToNext"
+			],
+			[
 				"ver",
 				"version_major"
 			],
@@ -299,13 +311,6 @@
 	},
 	"buffers":
 	[
-		{
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -342,8 +347,17 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/mjb/Entropy"
+	],
 	"file_history":
 	[
+		"/Users/mjb/Entropy/Xcode/Info.plist",
+		"/Users/mjb/Entropy/Doxygen/Doxyfile",
+		"/Users/mjb/Entropy/.gitignore",
+		"/Users/mjb/Entropy/Sourcecode/Entropy/Note.h",
+		"/Users/mjb/Entropy/Sourcecode/Entropy/Note.cpp",
 		"/Users/mjb/komp/Merlin/Merlin-Sourcecode/Classifier/ClassifierLabels.h",
 		"/Users/mjb/komp/Classes/Trainer/TrainerBridge.h",
 		"/Users/mjb/komp/Classes/Trainer/TrainerBridge.mm",
@@ -466,16 +480,11 @@
 		"/Users/mjb/komp/Merlin/Merlin-Sourcecode/Morpho/MATap.cc",
 		"/Users/mjb/komp/Merlin/Merlin-Sourcecode/Morpho/MATap.h",
 		"/Users/mjb/komp/Merlin/Merlin-Sourcecode/Morpho/MATriangle.cc",
-		"/Users/mjb/komp/Merlin/Merlin-Sourcecode/Morpho/MATriangle.h",
-		"/Users/mjb/komp/Merlin/Merlin-Sourcecode/Morpho/MAUnknown.cc",
-		"/Users/mjb/komp/Merlin/Merlin-Sourcecode/Morpho/MAUnknown.h",
-		"/Users/mjb/komp/Merlin/Merlin-Sourcecode/Morpho/MAVector.cc",
-		"/Users/mjb/komp/Merlin/Merlin-Sourcecode/Morpho/MAVector.h",
-		"/Users/mjb/komp/Merlin/Merlin-Sourcecode/Morpho/MAWavyLine.cc"
+		"/Users/mjb/komp/Merlin/Merlin-Sourcecode/Morpho/MATriangle.h"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -527,6 +536,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			";",
 			"ClassificationType::",
 			"White-Note",
 			"\"White-Note\"",
@@ -653,8 +663,7 @@
 			"\n\n",
 			"        <direction-type>\n          \n        </direction-type>",
 			"<wedge.*/>",
-			"<wedge*./>",
-			"        <notations>\n          \n        </notations>"
+			"<wedge*./>"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -662,6 +671,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\n    {\n\n    }\n\n    ",
+			"\n    {\n\n    }",
 			"NOTE_WHITE",
 			"\"NOTE_WHITE\"",
 			"\"LABEL_UNKNOWN\"",
@@ -787,9 +798,7 @@
 			"Tuplet",
 			"MeasureLocation",
 			"",
-			"Accidental",
-			"",
-			"DeleteCurveCommand"
+			"Accidental"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -800,36 +809,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -876,7 +857,7 @@
 	"project": "Entropy.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 242.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -885,6 +866,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"note",
+				"Sourcecode/Entropy/Note.cpp"
+			],
 			[
 				"classifierlabels",
 				"komp/Merlin/Merlin-Sourcecode/Classifier/ClassifierLabels.h"
@@ -1392,10 +1377,6 @@
 			[
 				"crazyh",
 				"komp/Resources/Documents/musicxml/semitone/Crazy Head Flippage.xml"
-			],
-			[
-				"chordtest",
-				"komp/Classifier/Tests/ChordTest.cc"
 			]
 		],
 		"width": 0.0
@@ -1426,7 +1407,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 250.0,
+	"side_bar_width": 179.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -39,10 +39,23 @@ namespace entropy
     	return myPosition.getScore();
     }
 
-    
-    Position 
+
+    bool Note::getIsPositioned() const
+    {
+        return myIsPositioned;
+    }
+
+
+    void Note::setIsPositioned( bool inValue )
+    {
+        myIsPositioned = inValue;
+    }
+
+
+    Position
     Note::getPosition() const
     {
+        ENTROPY_ASSERT(myIsPositioned);
     	return myPosition;
     }
 
@@ -50,6 +63,7 @@ namespace entropy
     void 
     Note::setPosition( Position inPosition )
     {
+        ENTROPY_ASSERT(myIsPositioned);
     	myPosition = inPosition;
     }
 
@@ -95,8 +109,22 @@ namespace entropy
         myIsRest = inValue;
     }
 
-    
-    bool 
+
+    bool
+    Note::getIsAccidentalVisible() const
+    {
+        return myIsAccidentalVisible;
+    }
+
+
+    void
+    Note::setIsAccidentalVisible( bool inValue )
+    {
+        myIsAccidentalVisible = inValue;
+    }
+
+
+    bool
     Note::getIsTiedToNext() const
     {
     	return myIsTiedToNext;
@@ -235,7 +263,42 @@ namespace entropy
     	myIsUpbow = inValue;
     }
 
-    
+    mx::api::NoteData
+    Note::createWithoutInsert() const
+    {
+        mx::api::NoteData outNote;
+        outNote.pitchData.step = convertStep( myPitch.getPitchClass().getStep() );
+        outNote.pitchData.alter = myPitch.getPitchClass().getAlterAmount();
+        outNote.pitchData.octave = myPitch.getOctave();
+
+        if( getIsPositioned() )
+        {
+            outNote.tickTimePosition = getPosition().getTick();
+        }
+        else
+        {
+            outNote.tickTimePosition = 0;
+        }
+
+        outNote.isRest = getIsRest();
+
+        const auto alter = myPitch.getPitchClass().getAlter();
+
+        if( getIsAccidentalVisible() && alter != Alter::ERROR )
+        {
+            outNote.pitchData.accidental = convertAlter( alter );
+        }
+
+        return outNote;
+    }
+
+
+    void
+    Note::createAndInsert() const
+    {
+
+    }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // PRIVATE FUNCTIONS ///////////////////////////////////////////////////////////

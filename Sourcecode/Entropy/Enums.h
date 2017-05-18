@@ -7,6 +7,8 @@
 
 #include "EnumMacros.h"
 
+#include "mx/api/ScoreData.h"
+
 namespace entropy
 {
     enum class ClefName
@@ -64,6 +66,37 @@ namespace entropy
         B,
         ERROR,
     };
+
+    inline Step convertStep( mx::api::Step inStep )
+    {
+        switch( inStep )
+        {
+            case mx::api::Step::c: return entropy::Step::C;
+            case mx::api::Step::d: return entropy::Step::D;
+            case mx::api::Step::e: return entropy::Step::E;
+            case mx::api::Step::f: return entropy::Step::F;
+            case mx::api::Step::g: return entropy::Step::G;
+            case mx::api::Step::a: return entropy::Step::A;
+            case mx::api::Step::b: return entropy::Step::B;
+            default: return entropy::Step::ERROR;
+        }
+    }
+
+    inline mx::api::Step convertStep( entropy::Step inStep )
+    {
+        switch( inStep )
+        {
+            case entropy::Step::C: return mx::api::Step::c;
+            case entropy::Step::D: return mx::api::Step::d;
+            case entropy::Step::E: return mx::api::Step::e;
+            case entropy::Step::F: return mx::api::Step::f;
+            case entropy::Step::G: return mx::api::Step::g;
+            case entropy::Step::A: return mx::api::Step::a;
+            case entropy::Step::B: return mx::api::Step::b;
+            case entropy::Step::ERROR: return mx::api::Step::c;
+            default: return mx::api::Step::c;
+        }
+    }
 
     ENUM_TOSTR_BEGIN( Step )
     ENUM_TOSTR_VALUE( Step, C )
@@ -166,6 +199,20 @@ namespace entropy
             case 2: return Alter::DOUBLE_SHARP;
             case -2: return Alter::DOUBLE_FLAT;
             default: return Alter::ERROR;
+        }
+    }
+
+    inline mx::api::Accidental convertAlter( Alter inAlter )
+    {
+        switch( inAlter )
+        {
+            case entropy::Alter::NATURAL: return mx::api::Accidental::natural;
+            case entropy::Alter::SHARP: return mx::api::Accidental::sharp;
+            case entropy::Alter::FLAT: return mx::api::Accidental::flat;
+            case entropy::Alter::DOUBLE_SHARP: return mx::api::Accidental::doubleSharp;
+            case entropy::Alter::DOUBLE_FLAT: return mx::api::Accidental::flatFlat;
+            case entropy::Alter::ERROR: return mx::api::Accidental::none;
+            default: return mx::api::Accidental::none;
         }
     }
 
